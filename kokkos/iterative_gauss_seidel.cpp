@@ -55,9 +55,9 @@ int main(int argc, char **argv)
 
     if (GREYSCALE)
     {
-        for (int i = 1; i < img.rows; i++)
+        for (int i = 1; i < img.rows+cn; i++)
         {
-            for (int j = 1; j < img.cols; j++)
+            for (int j = 1; j < img.cols+cn; j++)
             {
                 uint8_t b = pixelPtr[i * img.cols * cn + j * cn + 0]; // B
                 uint8_t g = pixelPtr[i * img.cols * cn + j * cn + 1]; // G
@@ -77,9 +77,9 @@ int main(int argc, char **argv)
     ///////////////////////////////////////////////////////
 
     // apply gauss seidel on color image
-    for (int i = 1; i < img.rows; i++)
+    for (int i = 1; i < img.rows+cn; i++)
     {
-        for (int j = 1; j < img.cols; j++)
+        for (int j = 1; j < img.cols+cn; j++)
         {
             //current pixel
             uint8_t b = pixelPtr[i * img.cols * cn + j * cn + 0];

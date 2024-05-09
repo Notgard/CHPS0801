@@ -1,2 +1,4 @@
 #!/bin/bash
 module load opencv/4.5.1
+module load cmake
+module load kokkos

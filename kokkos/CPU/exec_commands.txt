@@ -1,0 +1,11 @@
+OpenMP parallel compilation and execution for jacobi:
+
+srun -n 1 -c 16 --reservation=CHPS cmake -B jacobi/build-cpu -DKokkos_ENABLE_OPENMP=ON -DKokkos_ARCH_PASCAL60=ON jacobi/
+srun -n 1 -c 16 --reservation=CHPS cmake --build jacobi/build-cpu --parallel
+srun -n 1 -c 16 --reservation=CHPS ./jacobi/build-cpu/exec
+
+OpenMP parallel compilation and execution for gauss_seidel:
+
+srun -n 1 -c 16 --reservation=CHPS cmake -B gauss_seidel/build-cpu -DKokkos_ENABLE_OPENMP=ON -DKokkos_ARCH_PASCAL60=ON gauss_seidel/
+srun -n 1 -c 16 --reservation=CHPS cmake --build gauss_seidel/build-cpu --parallel
+srun -n 1 -c 16 --reservation=CHPS ./gauss_seidel/build-cpu/exec

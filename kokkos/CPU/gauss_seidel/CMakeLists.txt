@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.16)
+project(KokkosStencilProject)
+include(../../common.cmake)
+
+add_executable(01_Exercise exercise_1_begin.cpp)
+target_link_libraries(01_Exercise Kokkos::kokkos)
