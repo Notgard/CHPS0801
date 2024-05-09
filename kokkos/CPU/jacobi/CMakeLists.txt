@@ -11,6 +11,11 @@ set(SOURCES cpu_parallel_jacobi.cpp gaussianNoise.cpp)
 # Add executable with source files
 add_executable(kokkos_jacobi ${SOURCES})
 
+# Add compilation flags
+target_compile_options(kokkos_jacobi PRIVATE
+    -g                 # Generate debug information
+)
+
 # Link Kokkos library
 target_link_libraries(kokkos_jacobi Kokkos::kokkos)
 

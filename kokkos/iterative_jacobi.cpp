@@ -53,9 +53,10 @@ int main(int argc, char **argv)
     uint8_t *pixelPtr = (uint8_t *)image_pad.data;
     int cn = image_pad.channels();
 
-    for (int i = 0; i < img.rows+cn; i++)
+    //+4 to include the padding of 1 on each border of the image
+    for (int i = 0; i < img.rows+4; i++)
     {
-        for (int j = 0; j < img.cols+cn; j++)
+        for (int j = 0; j < img.cols+4; j++)
         {
             uint8_t b = pixelPtr[i * img.cols * cn + j * cn + 0]; // B
             uint8_t g = pixelPtr[i * img.cols * cn + j * cn + 1]; // G

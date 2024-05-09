@@ -6,5 +6,5 @@ CXX_DEFINES = -DKOKKOS_DEPENDENCE
 
 CXX_INCLUDES = -isystem /apps/2021/opencv/4.5.1/include/opencv4 -isystem /apps/2021/spack/0.17.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/kokkos-3.4.01-bngy6344ddjox34ktqilmykznuufydug/include
 
-CXX_FLAGS = -O2 -g -DNDEBUG -march=skylake-avx512 -mtune=skylake-avx512 -mrtm
+CXX_FLAGS = -O2 -g -DNDEBUG -g -march=skylake-avx512 -mtune=skylake-avx512 -mrtm
 
