@@ -2,10 +2,17 @@ cmake_minimum_required(VERSION 3.16)
 project(KokkosStencilJacobi)
 include(../../common.cmake)
 
-FIND_PACKAGE( OpenCV REQUIRED )                              
-INCLUDE_DIRECTORIES( ${OpenCV_INCLUDE_DIRS} )
+find_package(OpenCV REQUIRED)
+include_directories(${OpenCV_INCLUDE_DIRS})
 
-add_executable(kokkos_jacobi cpu_parallel_jacobi.cpp)
+# Define source files including gaussianNoise.cpp
+set(SOURCES cpu_parallel_jacobi.cpp gaussianNoise.cpp)
+
+# Add executable with source files
+add_executable(kokkos_jacobi ${SOURCES})
+
+# Link Kokkos library
 target_link_libraries(kokkos_jacobi Kokkos::kokkos)
-TARGET_LINK_LIBRARIES (kokkos_jacobi ${OpenCV_LIBS})  
 
+# Link OpenCV libraries
+target_link_libraries(kokkos_jacobi ${OpenCV_LIBS})
