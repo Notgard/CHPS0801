@@ -1,0 +1,23 @@
+OpenMP parallel compilation and execution for jacobi:
+
+srun -n 1 -c 16 --reservation=CHPS cmake -B jacobi/build-cpu -DKokkos_ENABLE_SERIAL=ON -DKokkos_ENABLE_OPENMP=ON -DKokkos_ARCH_PASCAL60=ON jacobi/
+srun -n 1 -c 16 --reservation=CHPS cmake --build jacobi/build-cpu --parallel
+srun -n 1 -c 16 --reservation=CHPS ./jacobi/build-cpu/kokkos_jacobi
+
+OpenMP parallel compilation and execution for gauss_seidel:
+
+srun -n 1 -c 16 --reservation=CHPS cmake -B gauss_seidel/build-cpu -DKokkos_ENABLE_SERIAL=ON -DKokkos_ENABLE_OPENMP=ON -DKokkos_ARCH_PASCAL60=ON gauss_seidel/
+srun -n 1 -c 16 --reservation=CHPS cmake --build gauss_seidel/build-cpu --parallel
+srun -n 1 -c 16 --reservation=CHPS ./gauss_seidel/build-cpu/kokkos_gauss_seidel
+
+GPU parallel compilation and execution for jacobi:
+
+CUDA_VISIBLE_DEVICES=0 srun --gres=gpu:1 --reservation=CHPS cmake -B jacobi/build-gpu -DKokkos_ENABLE_CUDA=ON -DKokkos_ARCH_PASCAL60=ON jacobi/
+CUDA_VISIBLE_DEVICES=0 srun --gres=gpu:1 --reservation=CHPS cmake --build jacobi/build-gpu --parallel
+CUDA_VISIBLE_DEVICES=0 srun --gres=gpu:1 --reservation=CHPS ./jacobi/build-gpu/kokkos_jacobi
+
+GPU parallel compilation and execution for gauss_seidel:
+
+CUDA_VISIBLE_DEVICES=0 srun --gres=gpu:1 --reservation=CHPS cmake -B gauss_seidel/build-gpu -DKokkos_ENABLE_CUDA=ON -DKokkos_ARCH_PASCAL60=ON gauss_seidel/
+CUDA_VISIBLE_DEVICES=0 srun --gres=gpu:1 --reservation=CHPS cmake --build gauss_seidel/build-gpu --parallel
+CUDA_VISIBLE_DEVICES=0 srun --gres=gpu:1 --reservation=CHPS ./gauss_seidel/build-gpu/exec

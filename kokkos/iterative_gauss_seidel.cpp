@@ -55,9 +55,9 @@ int main(int argc, char **argv)
 
     if (GREYSCALE)
     {
-        for (int i = 1; i < img.rows+4; i++)
+        for (int i = 0; i < img.rows; i++)
         {
-            for (int j = 1; j < img.cols+4; j++)
+            for (int j = 0; j < img.cols; j++)
             {
                 uint8_t b = pixelPtr[i * img.cols * cn + j * cn + 0]; // B
                 uint8_t g = pixelPtr[i * img.cols * cn + j * cn + 1]; // G
@@ -77,12 +77,11 @@ int main(int argc, char **argv)
     ///////////////////////////////////////////////////////
 
     // apply gauss seidel on color image
-    //+4 to include the padding of 1 on each border of the image
-    for (int i = 1; i < img.rows+4; i++)
+    for (int i = 1; i <= img.rows; i++)
     {
-        for (int j = 1; j < img.cols+4; j++)
+        for (int j = 1; j <= img.cols; j++)
         {
-            //current pixel
+            // current pixel
             uint8_t b = pixelPtr[i * img.cols * cn + j * cn + 0];
             uint8_t g = pixelPtr[i * img.cols * cn + j * cn + 1];
             uint8_t r = pixelPtr[i * img.cols * cn + j * cn + 2];
@@ -101,7 +100,7 @@ int main(int argc, char **argv)
             uint8_t left_b = pixelPtr[i * img.cols * cn + (j - 1) * cn + 0];
             uint8_t left_g = pixelPtr[i * img.cols * cn + (j - 1) * cn + 1];
             uint8_t left_r = pixelPtr[i * img.cols * cn + (j - 1) * cn + 2];
-            
+
             // right
             uint8_t right_b = pixelPtr[i * img.cols * cn + (j + 1) * cn + 0];
             uint8_t right_g = pixelPtr[i * img.cols * cn + (j + 1) * cn + 1];
@@ -120,7 +119,11 @@ int main(int argc, char **argv)
 
     fprintf(stdout, "Writting the output image of size %dx%d...\n", img.rows, img.cols);
 
-    imwrite("../res/gauss_seidel_res.jpg", image_pad);
+    cv::Rect roi(PADDING, PADDING, image_pad.cols - PADDING - PADDING, image_pad.rows - PADDING - PADDING);
+    cv::Mat image_no_pad = image_pad(roi).clone();
+    fprintf(stdout, "Removed padding from %dx%d to %dx%d...\n", image_pad.rows, image_pad.cols, image_no_pad.rows, image_no_pad.cols);
+
+    imwrite("../res/gauss_seidel_res.jpg", image_no_pad);
     imwrite("../res/noised_res.jpg", mColorNoise);
     return 0;
 }
