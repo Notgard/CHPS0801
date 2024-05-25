@@ -10,7 +10,8 @@ using namespace std::chrono;
 using namespace cv;
 using namespace std;
 
-#define NOISE_ITER 15   
+#define NOISE_ITER 15
+#define ITERATIONS 15
 #define PADDING 1
 
 int main(int argc, char **argv)
@@ -28,9 +29,9 @@ int main(int argc, char **argv)
         return 1;
     }
 
-    //add padding to the image
+    // add padding to the image
     Mat image_pad;
-    copyMakeBorder(img,image_pad, PADDING, PADDING, PADDING, PADDING, BORDER_CONSTANT, Scalar(0));
+    copyMakeBorder(img, image_pad, PADDING, PADDING, PADDING, PADDING, BORDER_CONSTANT, Scalar(0));
 
     ///////////////////////////////////////////////
     // Add noise to the image
@@ -57,61 +58,64 @@ int main(int argc, char **argv)
     int cn = image_pad.channels();
 
     auto start = high_resolution_clock::now();
-    for (int i = 0; i < img.rows; i++)
+    for (int iter = 0; iter < ITERATIONS; ++iter)
     {
-        for (int j = 0; j < img.cols; j++)
+        for (int i = 0; i < img.rows; i++)
         {
-            uint8_t b = pixelPtr[i * img.cols * cn + j * cn + 0]; // B
-            uint8_t g = pixelPtr[i * img.cols * cn + j * cn + 1]; // G
-            uint8_t r = pixelPtr[i * img.cols * cn + j * cn + 2]; // R
+            for (int j = 0; j < img.cols; j++)
+            {
+                uint8_t b = pixelPtr[i * img.cols * cn + j * cn + 0]; // B
+                uint8_t g = pixelPtr[i * img.cols * cn + j * cn + 1]; // G
+                uint8_t r = pixelPtr[i * img.cols * cn + j * cn + 2]; // R
 
-            //left red
-            uint8_t left_r = pixelPtr[i * img.cols * cn + (j - 1) * cn + 2];
-            //left green
-            uint8_t left_g = pixelPtr[i * img.cols * cn + (j - 1) * cn + 1];
-            //left blue
-            uint8_t left_b = pixelPtr[i * img.cols * cn + (j - 1) * cn + 0];
+                // left red
+                uint8_t left_r = pixelPtr[i * img.cols * cn + (j - 1) * cn + 2];
+                // left green
+                uint8_t left_g = pixelPtr[i * img.cols * cn + (j - 1) * cn + 1];
+                // left blue
+                uint8_t left_b = pixelPtr[i * img.cols * cn + (j - 1) * cn + 0];
 
-            //right red
-            uint8_t right_r = pixelPtr[i * img.cols * cn + (j + 1) * cn + 2];
-            //right green
-            uint8_t right_g = pixelPtr[i * img.cols * cn + (j + 1) * cn + 1];
-            //right blue
-            uint8_t right_b = pixelPtr[i * img.cols * cn + (j + 1) * cn + 0];
+                // right red
+                uint8_t right_r = pixelPtr[i * img.cols * cn + (j + 1) * cn + 2];
+                // right green
+                uint8_t right_g = pixelPtr[i * img.cols * cn + (j + 1) * cn + 1];
+                // right blue
+                uint8_t right_b = pixelPtr[i * img.cols * cn + (j + 1) * cn + 0];
 
-            //up red
-            uint8_t up_r = pixelPtr[(i - 1) * img.cols * cn + j * cn + 2];
-            //up green
-            uint8_t up_g = pixelPtr[(i - 1) * img.cols * cn + j * cn + 1];
-            //up blue
-            uint8_t up_b = pixelPtr[(i - 1) * img.cols * cn + j * cn + 0];
+                // up red
+                uint8_t up_r = pixelPtr[(i - 1) * img.cols * cn + j * cn + 2];
+                // up green
+                uint8_t up_g = pixelPtr[(i - 1) * img.cols * cn + j * cn + 1];
+                // up blue
+                uint8_t up_b = pixelPtr[(i - 1) * img.cols * cn + j * cn + 0];
 
-            //down red
-            uint8_t down_r = pixelPtr[(i + 1) * img.cols * cn + j * cn + 2];
-            //down green
-            uint8_t down_g = pixelPtr[(i + 1) * img.cols * cn + j * cn + 1];
-            //down blue
-            uint8_t down_b = pixelPtr[(i + 1) * img.cols * cn + j * cn + 0];
+                // down red
+                uint8_t down_r = pixelPtr[(i + 1) * img.cols * cn + j * cn + 2];
+                // down green
+                uint8_t down_g = pixelPtr[(i + 1) * img.cols * cn + j * cn + 1];
+                // down blue
+                uint8_t down_b = pixelPtr[(i + 1) * img.cols * cn + j * cn + 0];
 
-            //get the average of the neighbors
-            uint8_t avg_r = (r + left_r + right_r + up_r + down_r) / 5;
-            uint8_t avg_g = (g + left_g + right_g + up_g + down_g) / 5;
-            uint8_t avg_b = (b + left_b + right_b + up_b + down_b) / 5;
+                // get the average of the neighbors
+                uint8_t avg_r = (r + left_r + right_r + up_r + down_r) / 5;
+                uint8_t avg_g = (g + left_g + right_g + up_g + down_g) / 5;
+                uint8_t avg_b = (b + left_b + right_b + up_b + down_b) / 5;
 
-            //print average pixel
-            //cout << "Average pixel: " << unsigned(avg[0]) << " " << unsigned(avg[1]) << " " << unsigned(avg[2]) << endl;
+                // print average pixel
+                // cout << "Average pixel: " << unsigned(avg[0]) << " " << unsigned(avg[1]) << " " << unsigned(avg[2]) << endl;
 
-            //update the pixel
-            pixelPtr[i * img.cols * cn + j * cn + 0] = avg_b; //B
-            pixelPtr[i * img.cols * cn + j * cn + 1] = avg_g; //G
-            pixelPtr[i * img.cols * cn + j * cn + 2] = avg_r; //R
+                // update the pixel
+                pixelPtr[i * img.cols * cn + j * cn + 0] = avg_b; // B
+                pixelPtr[i * img.cols * cn + j * cn + 1] = avg_g; // G
+                pixelPtr[i * img.cols * cn + j * cn + 2] = avg_r; // R
+            }
         }
     }
     auto stop = high_resolution_clock::now();
 
     std::chrono::duration<double> diff = stop - start;
-    //output measured time in seconds
-    cout << setprecision (20)
+    // output measured time in seconds
+    cout << setprecision(20)
          << diff.count() << " seconds" << endl;
 
     fprintf(stdout, "Writting the output image of size %dx%d...\n", img.rows, img.cols);

@@ -14,7 +14,7 @@ using namespace std;
 int main(int argc, char **argv)
 {
     CommandLineParser parser(argc, argv,
-                             "{@input   |../img/lena.jpg|input image}");
+                             "{@input   |../img/img.jpg|input image}");
     parser.printMessage();
 
     String imageName = parser.get<String>("@input");

@@ -1,0 +1,580 @@
+The system is: Linux - 3.10.0-1160.2.2.el7.x86_64 - x86_64
+Checking whether the CUDA compiler is NVIDIA using "" matched "nvcc: NVIDIA \(R\) Cuda compiler driver":
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2019 NVIDIA Corporation
+Built on Fri_Feb__8_19:08:17_PST_2019
+Cuda compilation tools, release 10.1, V10.1.105
+Compiling the CUDA compiler identification source file "CMakeCUDACompilerId.cu" succeeded.
+Compiler: /apps/2021/cuda/10.1/bin/nvcc 
+Build flags: 
+Id flags: --keep;--keep-dir;tmp -v
+
+The output was:
+0
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/apps/2021/cuda/10.1/bin
+#$ _THERE_=/apps/2021/cuda/10.1/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_DIR_=targets/x86_64-linux
+#$ TOP=/apps/2021/cuda/10.1/bin/..
+#$ NVVMIR_LIBRARY_DIR=/apps/2021/cuda/10.1/bin/../nvvm/libdevice
+#$ LD_LIBRARY_PATH=/apps/2021/cuda/10.1/bin/../lib:/apps/2021/llvm/11.0.0/lib:/apps/2021/llvm/11.0.0/libexec:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib64:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libelf-0.8.13-m5ndvdx7mc7al3xfq2venrdfo2laoy3g/lib:/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/isl-0.18-zwfd4x6n3v3vads3ncukk5mtgt6xv2qj/lib:/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpc-1.1.0-ijex5qs7pt44n7whqlgwqj4jwc3czkac/lib:/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpfr-4.0.2-yfoprebczoqpokivqgmnjn5os4r7mxw6/lib:/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gmp-6.1.2-raqmdaosldybjrn6y2xnnnyy2f63hg6b/lib:/apps/2021/gcc/8.1.0/lib64:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/:/apps/2021/gcc/8.1.0/lib:/apps/2021/cuda/10.1/extras/CUPTI/lib64:/apps/2021/cuda/10.1/lib64:/apps/2021/cuda/10.1/lib:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/openssl-1.1.1h-iwybd6raqg2jisesulhn4eq4u6pua4r5/lib:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/zlib-1.2.11-cd5sn7qr4dpsl52yco7o4un6svatshid/lib:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/ncurses-6.2-hjedt2uy7o2piyycr3ttni2puoezbfu6/lib:/apps/2021/opencv/4.5.2-contrib-gcc8/lib64:/apps/mpfr/4.0.1/lib:/apps/mpc/1.1.0/lib:/apps/gmp/6.1.2/lib:/apps/isl/0.19/lib:/apps/2021/gcc/10.2/lib64:/apps/2021/gcc/10.2/lib/gcc/x86_64-pc-linux-gnu/10.2.0/:/apps/2021/gcc/10.2/lib
+#$ PATH=/apps/2021/cuda/10.1/bin/../nvvm/bin:/apps/2021/cuda/10.1/bin:/apps/2021/llvm/11.0.0/bin:/apps/2021/gcc/8.1.0/bin:/apps/2021/cuda/10.1/bin:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/cmake-3.18.4-kw3wpvkxke7lo3atixjcvt4roclfopip/bin:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/openssl-1.1.1h-iwybd6raqg2jisesulhn4eq4u6pua4r5/bin:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/ncurses-6.2-hjedt2uy7o2piyycr3ttni2puoezbfu6/bin:/apps/2021/opencv/4.5.2-contrib-gcc8/bin:/apps/2021/gcc/10.2/bin:/apps/2021/spack/0.16.1/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/miniconda3-4.8.2-nz6lrn3qhdvgcm6pf73st2ejzxqjhhwq/condabin:/apps/2021/spack/0.21.0/bin:/apps/tools/bin:/apps/environment-modules/5.3.1/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/groubahiefissa/.local/bin:/home/groubahiefissa/bin
+#$ INCLUDES="-I/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include"  
+#$ LIBRARIES=  "-L/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/lib/stubs" "-L/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/lib"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+#$ rm tmp/a_dlink.reg.c
+#$ gcc -std=c++14 -D__CUDA_ARCH__=300 -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__  "-I/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=10 -D__CUDACC_VER_MINOR__=1 -D__CUDACC_VER_BUILD__=105 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" > "tmp/CMakeCUDACompilerId.cpp1.ii" 
+#$ cicc --c++14 --gnu_version=80100 --allow_managed   -arch compute_30 -m64 -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "CMakeCUDACompilerId.fatbin.c" -tused -nvvmir-library "/apps/2021/cuda/10.1/bin/../nvvm/libdevice/libdevice.10.bc" --gen_module_id_file --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" --orig_src_file_name "CMakeCUDACompilerId.cu" --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.c" --stub_file_name "tmp/CMakeCUDACompilerId.cudafe1.stub.c" --gen_device_file_name "tmp/CMakeCUDACompilerId.cudafe1.gpu"  "tmp/CMakeCUDACompilerId.cpp1.ii" -o "tmp/CMakeCUDACompilerId.ptx"
+#$ ptxas -arch=sm_30 -m64  "tmp/CMakeCUDACompilerId.ptx"  -o "tmp/CMakeCUDACompilerId.sm_30.cubin" 
+#$ fatbinary --create="tmp/CMakeCUDACompilerId.fatbin" -64 "--image=profile=sm_30,file=tmp/CMakeCUDACompilerId.sm_30.cubin" "--image=profile=compute_30,file=tmp/CMakeCUDACompilerId.ptx" --embedded-fatbin="tmp/CMakeCUDACompilerId.fatbin.c" 
+#$ gcc -std=c++14 -E -x c++ -D__CUDACC__ -D__NVCC__  "-I/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=10 -D__CUDACC_VER_MINOR__=1 -D__CUDACC_VER_BUILD__=105 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" > "tmp/CMakeCUDACompilerId.cpp4.ii" 
+#$ cudafe++ --c++14 --gnu_version=80100 --allow_managed  --m64 --parse_templates --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.cpp" --stub_file_name "CMakeCUDACompilerId.cudafe1.stub.c" --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" "tmp/CMakeCUDACompilerId.cpp4.ii" 
+#$ gcc -std=c++14 -D__CUDA_ARCH__=300 -c -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS "-I/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include"   -m64 -o "tmp/CMakeCUDACompilerId.o" "tmp/CMakeCUDACompilerId.cudafe1.cpp" 
+#$ nvlink --arch=sm_30 --register-link-binaries="tmp/a_dlink.reg.c"  -m64   "-L/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/lib/stubs" "-L/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/lib" -cpu-arch=X86_64 "tmp/CMakeCUDACompilerId.o"  -o "tmp/a_dlink.sm_30.cubin"
+#$ fatbinary --create="tmp/a_dlink.fatbin" -64 -link "--image=profile=sm_30,file=tmp/a_dlink.sm_30.cubin" --embedded-fatbin="tmp/a_dlink.fatbin.c" 
+#$ gcc -std=c++14 -c -x c++ -DFATBINFILE="\"tmp/a_dlink.fatbin.c\"" -DREGISTERLINKBINARYFILE="\"tmp/a_dlink.reg.c\"" -I. -D__NV_EXTRA_INITIALIZATION= -D__NV_EXTRA_FINALIZATION= -D__CUDA_INCLUDE_COMPILER_INTERNAL_HEADERS__  "-I/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=10 -D__CUDACC_VER_MINOR__=1 -D__CUDACC_VER_BUILD__=105 -m64 -o "tmp/a_dlink.o" "/apps/2021/cuda/10.1/bin/crt/link.stub" 
+#$ g++ -m64 -o "a.out" -std=c++14 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   "-L/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/lib/stubs" "-L/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/lib" -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group 
+
+
+Compilation of the CUDA compiler identification source "CMakeCUDACompilerId.cu" produced "a.out"
+
+The CUDA compiler identification is NVIDIA, found in "/home/groubahiefissa/chps/chps0801_projet/kokkos/parallel/jacobi/build-gpu/Kokkos/CMakeFiles/CheckCUDA/CMakeFiles/3.18.4/CompilerIdCUDA/a.out"
+
+Parsed CUDA nvcc implicit link information from above output:
+  found 'PATH=' string: [/apps/2021/cuda/10.1/bin/../nvvm/bin:/apps/2021/cuda/10.1/bin:/apps/2021/llvm/11.0.0/bin:/apps/2021/gcc/8.1.0/bin:/apps/2021/cuda/10.1/bin:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/cmake-3.18.4-kw3wpvkxke7lo3atixjcvt4roclfopip/bin:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/openssl-1.1.1h-iwybd6raqg2jisesulhn4eq4u6pua4r5/bin:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/ncurses-6.2-hjedt2uy7o2piyycr3ttni2puoezbfu6/bin:/apps/2021/opencv/4.5.2-contrib-gcc8/bin:/apps/2021/gcc/10.2/bin:/apps/2021/spack/0.16.1/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/miniconda3-4.8.2-nz6lrn3qhdvgcm6pf73st2ejzxqjhhwq/condabin:/apps/2021/spack/0.21.0/bin:/apps/tools/bin:/apps/environment-modules/5.3.1/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/groubahiefissa/.local/bin:/home/groubahiefissa/bin]
+  found 'LIBRARIES=' string: ["-L/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/lib/stubs" "-L/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/lib"]
+  considering line: [#$ rm tmp/a_dlink.reg.c]
+  considering line: [gcc -std=c++14 -D__CUDA_ARCH__=300 -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__  "-I/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=10 -D__CUDACC_VER_MINOR__=1 -D__CUDACC_VER_BUILD__=105 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" > "tmp/CMakeCUDACompilerId.cpp1.ii" ]
+  considering line: [cicc --c++14 --gnu_version=80100 --allow_managed   -arch compute_30 -m64 -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "CMakeCUDACompilerId.fatbin.c" -tused -nvvmir-library "/apps/2021/cuda/10.1/bin/../nvvm/libdevice/libdevice.10.bc" --gen_module_id_file --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" --orig_src_file_name "CMakeCUDACompilerId.cu" --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.c" --stub_file_name "tmp/CMakeCUDACompilerId.cudafe1.stub.c" --gen_device_file_name "tmp/CMakeCUDACompilerId.cudafe1.gpu"  "tmp/CMakeCUDACompilerId.cpp1.ii" -o "tmp/CMakeCUDACompilerId.ptx"]
+  considering line: [ptxas -arch=sm_30 -m64  "tmp/CMakeCUDACompilerId.ptx"  -o "tmp/CMakeCUDACompilerId.sm_30.cubin" ]
+  considering line: [fatbinary --create="tmp/CMakeCUDACompilerId.fatbin" -64 "--image=profile=sm_30,file=tmp/CMakeCUDACompilerId.sm_30.cubin" "--image=profile=compute_30,file=tmp/CMakeCUDACompilerId.ptx" --embedded-fatbin="tmp/CMakeCUDACompilerId.fatbin.c" ]
+  considering line: [gcc -std=c++14 -E -x c++ -D__CUDACC__ -D__NVCC__  "-I/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=10 -D__CUDACC_VER_MINOR__=1 -D__CUDACC_VER_BUILD__=105 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" > "tmp/CMakeCUDACompilerId.cpp4.ii" ]
+  considering line: [cudafe++ --c++14 --gnu_version=80100 --allow_managed  --m64 --parse_templates --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.cpp" --stub_file_name "CMakeCUDACompilerId.cudafe1.stub.c" --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" "tmp/CMakeCUDACompilerId.cpp4.ii" ]
+  considering line: [gcc -std=c++14 -D__CUDA_ARCH__=300 -c -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS "-I/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include"   -m64 -o "tmp/CMakeCUDACompilerId.o" "tmp/CMakeCUDACompilerId.cudafe1.cpp" ]
+  considering line: [nvlink --arch=sm_30 --register-link-binaries="tmp/a_dlink.reg.c"  -m64   "-L/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/lib/stubs" "-L/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/lib" -cpu-arch=X86_64 "tmp/CMakeCUDACompilerId.o"  -o "tmp/a_dlink.sm_30.cubin"]
+    ignoring nvlink line
+  considering line: [fatbinary --create="tmp/a_dlink.fatbin" -64 -link "--image=profile=sm_30,file=tmp/a_dlink.sm_30.cubin" --embedded-fatbin="tmp/a_dlink.fatbin.c" ]
+  considering line: [gcc -std=c++14 -c -x c++ -DFATBINFILE="\"tmp/a_dlink.fatbin.c\"" -DREGISTERLINKBINARYFILE="\"tmp/a_dlink.reg.c\"" -I. -D__NV_EXTRA_INITIALIZATION= -D__NV_EXTRA_FINALIZATION= -D__CUDA_INCLUDE_COMPILER_INTERNAL_HEADERS__  "-I/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=10 -D__CUDACC_VER_MINOR__=1 -D__CUDACC_VER_BUILD__=105 -m64 -o "tmp/a_dlink.o" "/apps/2021/cuda/10.1/bin/crt/link.stub" ]
+  considering line: [g++ -m64 -o "a.out" -std=c++14 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   "-L/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/lib/stubs" "-L/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/lib" -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group ]
+    extracted link line: [g++ -m64 -o "a.out" -std=c++14 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   "-L/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/lib/stubs" "-L/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/lib" -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group ]
+  considering line: []
+  extracted link launcher name: [g++]
+  found link launcher absolute path: [/apps/2021/gcc/8.1.0/bin/g++]
+
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  link line: [cuda-fake-ld g++ -m64 -o "a.out" -std=c++14 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   "-L/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/lib/stubs" "-L/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/lib" -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group ]
+    arg [cuda-fake-ld] ==> ignore
+    arg [g++] ==> ignore
+    arg [-m64] ==> ignore
+    arg [-o] ==> ignore
+    arg [a.out] ==> ignore
+    arg [-std=c++14] ==> ignore
+    arg [-Wl,--start-group] ==> ignore
+    arg [tmp/a_dlink.o] ==> ignore
+    arg [tmp/CMakeCUDACompilerId.o] ==> ignore
+    arg [-L/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/lib/stubs] ==> dir [/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/lib/stubs]
+    arg [-L/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/lib] ==> dir [/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/lib]
+    arg [-lcudadevrt] ==> lib [cudadevrt]
+    arg [-lcudart_static] ==> lib [cudart_static]
+    arg [-lrt] ==> lib [rt]
+    arg [-lpthread] ==> lib [pthread]
+    arg [-ldl] ==> lib [dl]
+    arg [-Wl,--end-group] ==> ignore
+  collapse library dir [/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/lib/stubs] ==> [/apps/2021/cuda/10.1/targets/x86_64-linux/lib/stubs]
+  collapse library dir [/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/lib] ==> [/apps/2021/cuda/10.1/targets/x86_64-linux/lib]
+  implicit libs: [cudadevrt;cudart_static;rt;pthread;dl]
+  implicit dirs: [/apps/2021/cuda/10.1/targets/x86_64-linux/lib/stubs;/apps/2021/cuda/10.1/targets/x86_64-linux/lib]
+  implicit fwks: []
+
+
+Parsed CUDA nvcc include information from above output:
+  found 'PATH=' string: [/apps/2021/cuda/10.1/bin/../nvvm/bin:/apps/2021/cuda/10.1/bin:/apps/2021/llvm/11.0.0/bin:/apps/2021/gcc/8.1.0/bin:/apps/2021/cuda/10.1/bin:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/cmake-3.18.4-kw3wpvkxke7lo3atixjcvt4roclfopip/bin:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/openssl-1.1.1h-iwybd6raqg2jisesulhn4eq4u6pua4r5/bin:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/ncurses-6.2-hjedt2uy7o2piyycr3ttni2puoezbfu6/bin:/apps/2021/opencv/4.5.2-contrib-gcc8/bin:/apps/2021/gcc/10.2/bin:/apps/2021/spack/0.16.1/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/miniconda3-4.8.2-nz6lrn3qhdvgcm6pf73st2ejzxqjhhwq/condabin:/apps/2021/spack/0.21.0/bin:/apps/tools/bin:/apps/environment-modules/5.3.1/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/groubahiefissa/.local/bin:/home/groubahiefissa/bin]
+  found 'LIBRARIES=' string: ["-L/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/lib/stubs" "-L/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/lib"]
+  considering line: [#$ rm tmp/a_dlink.reg.c]
+  considering line: [gcc -std=c++14 -D__CUDA_ARCH__=300 -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__  "-I/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=10 -D__CUDACC_VER_MINOR__=1 -D__CUDACC_VER_BUILD__=105 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" > "tmp/CMakeCUDACompilerId.cpp1.ii" ]
+  considering line: [cicc --c++14 --gnu_version=80100 --allow_managed   -arch compute_30 -m64 -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "CMakeCUDACompilerId.fatbin.c" -tused -nvvmir-library "/apps/2021/cuda/10.1/bin/../nvvm/libdevice/libdevice.10.bc" --gen_module_id_file --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" --orig_src_file_name "CMakeCUDACompilerId.cu" --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.c" --stub_file_name "tmp/CMakeCUDACompilerId.cudafe1.stub.c" --gen_device_file_name "tmp/CMakeCUDACompilerId.cudafe1.gpu"  "tmp/CMakeCUDACompilerId.cpp1.ii" -o "tmp/CMakeCUDACompilerId.ptx"]
+  considering line: [ptxas -arch=sm_30 -m64  "tmp/CMakeCUDACompilerId.ptx"  -o "tmp/CMakeCUDACompilerId.sm_30.cubin" ]
+  considering line: [fatbinary --create="tmp/CMakeCUDACompilerId.fatbin" -64 "--image=profile=sm_30,file=tmp/CMakeCUDACompilerId.sm_30.cubin" "--image=profile=compute_30,file=tmp/CMakeCUDACompilerId.ptx" --embedded-fatbin="tmp/CMakeCUDACompilerId.fatbin.c" ]
+  considering line: [gcc -std=c++14 -E -x c++ -D__CUDACC__ -D__NVCC__  "-I/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=10 -D__CUDACC_VER_MINOR__=1 -D__CUDACC_VER_BUILD__=105 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" > "tmp/CMakeCUDACompilerId.cpp4.ii" ]
+  considering line: [cudafe++ --c++14 --gnu_version=80100 --allow_managed  --m64 --parse_templates --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.cpp" --stub_file_name "CMakeCUDACompilerId.cudafe1.stub.c" --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" "tmp/CMakeCUDACompilerId.cpp4.ii" ]
+  considering line: [gcc -std=c++14 -D__CUDA_ARCH__=300 -c -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS "-I/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include"   -m64 -o "tmp/CMakeCUDACompilerId.o" "tmp/CMakeCUDACompilerId.cudafe1.cpp" ]
+  considering line: [nvlink --arch=sm_30 --register-link-binaries="tmp/a_dlink.reg.c"  -m64   "-L/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/lib/stubs" "-L/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/lib" -cpu-arch=X86_64 "tmp/CMakeCUDACompilerId.o"  -o "tmp/a_dlink.sm_30.cubin"]
+    ignoring nvlink line
+  considering line: [fatbinary --create="tmp/a_dlink.fatbin" -64 -link "--image=profile=sm_30,file=tmp/a_dlink.sm_30.cubin" --embedded-fatbin="tmp/a_dlink.fatbin.c" ]
+  considering line: [gcc -std=c++14 -c -x c++ -DFATBINFILE="\"tmp/a_dlink.fatbin.c\"" -DREGISTERLINKBINARYFILE="\"tmp/a_dlink.reg.c\"" -I. -D__NV_EXTRA_INITIALIZATION= -D__NV_EXTRA_FINALIZATION= -D__CUDA_INCLUDE_COMPILER_INTERNAL_HEADERS__  "-I/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=10 -D__CUDACC_VER_MINOR__=1 -D__CUDACC_VER_BUILD__=105 -m64 -o "tmp/a_dlink.o" "/apps/2021/cuda/10.1/bin/crt/link.stub" ]
+  considering line: [g++ -m64 -o "a.out" -std=c++14 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   "-L/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/lib/stubs" "-L/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/lib" -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group ]
+    extracted link line: [g++ -m64 -o "a.out" -std=c++14 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   "-L/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/lib/stubs" "-L/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/lib" -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group ]
+  considering line: []
+  extracted link launcher name: [g++]
+  found link launcher absolute path: [/apps/2021/gcc/8.1.0/bin/g++]
+  found 'INCLUDES=' string: ["-I/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include"  ]
+
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  link line: [cuda-fake-ld g++ -m64 -o "a.out" -std=c++14 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   "-L/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/lib/stubs" "-L/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/lib" -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group ]
+    arg [cuda-fake-ld] ==> ignore
+    arg [g++] ==> ignore
+    arg [-m64] ==> ignore
+    arg [-o] ==> ignore
+    arg [a.out] ==> ignore
+    arg [-std=c++14] ==> ignore
+    arg [-Wl,--start-group] ==> ignore
+    arg [tmp/a_dlink.o] ==> ignore
+    arg [tmp/CMakeCUDACompilerId.o] ==> ignore
+    arg [-L/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/lib/stubs] ==> dir [/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/lib/stubs]
+    arg [-L/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/lib] ==> dir [/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/lib]
+    arg [-lcudadevrt] ==> lib [cudadevrt]
+    arg [-lcudart_static] ==> lib [cudart_static]
+    arg [-lrt] ==> lib [rt]
+    arg [-lpthread] ==> lib [pthread]
+    arg [-ldl] ==> lib [dl]
+    arg [-Wl,--end-group] ==> ignore
+  collapse library dir [/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/lib/stubs] ==> [/apps/2021/cuda/10.1/targets/x86_64-linux/lib/stubs]
+  collapse library dir [/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/lib] ==> [/apps/2021/cuda/10.1/targets/x86_64-linux/lib]
+  implicit libs: [cudadevrt;cudart_static;rt;pthread;dl]
+  implicit dirs: [/apps/2021/cuda/10.1/targets/x86_64-linux/lib/stubs;/apps/2021/cuda/10.1/targets/x86_64-linux/lib]
+  implicit fwks: []
+
+
+Detecting CUDA compiler ABI info compiled with the following output:
+Change Dir: /home/groubahiefissa/chps/chps0801_projet/kokkos/parallel/jacobi/build-gpu/Kokkos/CMakeFiles/CheckCUDA/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_39c5c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_39c5c.dir/build.make CMakeFiles/cmTC_39c5c.dir/build
+gmake[1]: Entering directory `/home/groubahiefissa/chps/chps0801_projet/kokkos/parallel/jacobi/build-gpu/Kokkos/CMakeFiles/CheckCUDA/CMakeFiles/CMakeTmp'
+Building CUDA object CMakeFiles/cmTC_39c5c.dir/CMakeCUDACompilerABI.cu.o
+/apps/2021/cuda/10.1/bin/nvcc    --generate-code=arch=compute_30,code=[compute_30,sm_30]   -Xcompiler=-v -x cu -c /apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/cmake-3.18.4-kw3wpvkxke7lo3atixjcvt4roclfopip/share/cmake-3.18/Modules/CMakeCUDACompilerABI.cu -o CMakeFiles/cmTC_39c5c.dir/CMakeCUDACompilerABI.cu.o
+Using built-in specs.
+COLLECT_GCC=gcc
+Target: x86_64-pc-linux-gnu
+Configured with: ./configure --prefix=/apps/2021/gcc/8.1.0/ --with-gmp=/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gmp-6.1.2-raqmdaosldybjrn6y2xnnnyy2f63hg6b --with-mpfr=/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpfr-4.0.2-yfoprebczoqpokivqgmnjn5os4r7mxw6 --with-mpc=/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpc-1.1.0-ijex5qs7pt44n7whqlgwqj4jwc3czkac --with-isl=/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/isl-0.18-zwfd4x6n3v3vads3ncukk5mtgt6xv2qj --disable-multilib
+Thread model: posix
+gcc version 8.1.0 (GCC) 
+COLLECT_GCC_OPTIONS='-std=c++14' '-D' '__CUDA_ARCH__=300' '-E' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=10' '-D' '__CUDACC_VER_MINOR__=1' '-D' '__CUDACC_VER_BUILD__=105' '-include' 'cuda_runtime.h' '-m64' '-mtune=generic' '-march=x86-64'
+ /apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/8.1.0/cc1plus -E -quiet -v -I /apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include -D_GNU_SOURCE -D __CUDA_ARCH__=300 -D CUDA_DOUBLE_MATH_FUNCTIONS -D __CUDACC__ -D __NVCC__ -D __CUDACC_VER_MAJOR__=10 -D __CUDACC_VER_MINOR__=1 -D __CUDACC_VER_BUILD__=105 -include cuda_runtime.h /apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/cmake-3.18.4-kw3wpvkxke7lo3atixjcvt4roclfopip/share/cmake-3.18/Modules/CMakeCUDACompilerABI.cu -m64 -mtune=generic -march=x86-64 -std=c++14
+ignoring nonexistent directory "/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../x86_64-pc-linux-gnu/include"
+ignoring duplicate directory "/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include"
+  as it is a non-system directory that duplicates a system directory
+ignoring duplicate directory "/apps/2021/cuda/10.1/include"
+  as it is a non-system directory that duplicates a system directory
+#include "..." search starts here:
+#include <...> search starts here:
+ /apps/2021/opencv/4.5.2-contrib/include/opencv4
+ /apps/2021/llvm/11.0.0/include
+ /apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/include
+ /apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libelf-0.8.13-m5ndvdx7mc7al3xfq2venrdfo2laoy3g/include
+ /apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/isl-0.18-zwfd4x6n3v3vads3ncukk5mtgt6xv2qj/include
+ /apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpc-1.1.0-ijex5qs7pt44n7whqlgwqj4jwc3czkac/include
+ /apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpfr-4.0.2-yfoprebczoqpokivqgmnjn5os4r7mxw6/include
+ /apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gmp-6.1.2-raqmdaosldybjrn6y2xnnnyy2f63hg6b/include
+ /apps/2021/cuda/10.1/include
+ /apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/openssl-1.1.1h-iwybd6raqg2jisesulhn4eq4u6pua4r5/include
+ /apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/zlib-1.2.11-cd5sn7qr4dpsl52yco7o4un6svatshid/include
+ /apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/ncurses-6.2-hjedt2uy7o2piyycr3ttni2puoezbfu6/include
+ /apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../include/c++/8.1.0
+ /apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../include/c++/8.1.0/x86_64-pc-linux-gnu
+ /apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../include/c++/8.1.0/backward
+ /apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/include
+ /usr/local/include
+ /apps/2021/gcc/8.1.0/include
+ /apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/include-fixed
+ /usr/include
+End of search list.
+COMPILER_PATH=/apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/8.1.0/:/apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/8.1.0/:/apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib64/../lib64/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib/../lib64/:/apps/2021/opencv/4.5.2-contrib/lib64/../lib64/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/apps/2021/llvm/11.0.0/lib/:/apps/2021/llvm/11.0.0/libexec/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib64/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libelf-0.8.13-m5ndvdx7mc7al3xfq2venrdfo2laoy3g/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/isl-0.18-zwfd4x6n3v3vads3ncukk5mtgt6xv2qj/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpc-1.1.0-ijex5qs7pt44n7whqlgwqj4jwc3czkac/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpfr-4.0.2-yfoprebczoqpokivqgmnjn5os4r7mxw6/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gmp-6.1.2-raqmdaosldybjrn6y2xnnnyy2f63hg6b/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/openssl-1.1.1h-iwybd6raqg2jisesulhn4eq4u6pua4r5/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/zlib-1.2.11-cd5sn7qr4dpsl52yco7o4un6svatshid/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/ncurses-6.2-hjedt2uy7o2piyycr3ttni2puoezbfu6/lib/:/apps/2021/opencv/4.5.2-contrib/lib64/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-std=c++14' '-D' '__CUDA_ARCH__=300' '-E' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=10' '-D' '__CUDACC_VER_MINOR__=1' '-D' '__CUDACC_VER_BUILD__=105' '-include' 'cuda_runtime.h' '-m64' '-mtune=generic' '-march=x86-64'
+Using built-in specs.
+COLLECT_GCC=gcc
+Target: x86_64-pc-linux-gnu
+Configured with: ./configure --prefix=/apps/2021/gcc/8.1.0/ --with-gmp=/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gmp-6.1.2-raqmdaosldybjrn6y2xnnnyy2f63hg6b --with-mpfr=/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpfr-4.0.2-yfoprebczoqpokivqgmnjn5os4r7mxw6 --with-mpc=/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpc-1.1.0-ijex5qs7pt44n7whqlgwqj4jwc3czkac --with-isl=/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/isl-0.18-zwfd4x6n3v3vads3ncukk5mtgt6xv2qj --disable-multilib
+Thread model: posix
+gcc version 8.1.0 (GCC) 
+COLLECT_GCC_OPTIONS='-std=c++14' '-E' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=10' '-D' '__CUDACC_VER_MINOR__=1' '-D' '__CUDACC_VER_BUILD__=105' '-include' 'cuda_runtime.h' '-m64' '-mtune=generic' '-march=x86-64'
+ /apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/8.1.0/cc1plus -E -quiet -v -I /apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include -D_GNU_SOURCE -D __CUDACC__ -D __NVCC__ -D __CUDACC_VER_MAJOR__=10 -D __CUDACC_VER_MINOR__=1 -D __CUDACC_VER_BUILD__=105 -include cuda_runtime.h /apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/cmake-3.18.4-kw3wpvkxke7lo3atixjcvt4roclfopip/share/cmake-3.18/Modules/CMakeCUDACompilerABI.cu -m64 -mtune=generic -march=x86-64 -std=c++14
+ignoring nonexistent directory "/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../x86_64-pc-linux-gnu/include"
+ignoring duplicate directory "/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include"
+  as it is a non-system directory that duplicates a system directory
+ignoring duplicate directory "/apps/2021/cuda/10.1/include"
+  as it is a non-system directory that duplicates a system directory
+#include "..." search starts here:
+#include <...> search starts here:
+ /apps/2021/opencv/4.5.2-contrib/include/opencv4
+ /apps/2021/llvm/11.0.0/include
+ /apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/include
+ /apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libelf-0.8.13-m5ndvdx7mc7al3xfq2venrdfo2laoy3g/include
+ /apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/isl-0.18-zwfd4x6n3v3vads3ncukk5mtgt6xv2qj/include
+ /apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpc-1.1.0-ijex5qs7pt44n7whqlgwqj4jwc3czkac/include
+ /apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpfr-4.0.2-yfoprebczoqpokivqgmnjn5os4r7mxw6/include
+ /apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gmp-6.1.2-raqmdaosldybjrn6y2xnnnyy2f63hg6b/include
+ /apps/2021/cuda/10.1/include
+ /apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/openssl-1.1.1h-iwybd6raqg2jisesulhn4eq4u6pua4r5/include
+ /apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/zlib-1.2.11-cd5sn7qr4dpsl52yco7o4un6svatshid/include
+ /apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/ncurses-6.2-hjedt2uy7o2piyycr3ttni2puoezbfu6/include
+ /apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../include/c++/8.1.0
+ /apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../include/c++/8.1.0/x86_64-pc-linux-gnu
+ /apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../include/c++/8.1.0/backward
+ /apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/include
+ /usr/local/include
+ /apps/2021/gcc/8.1.0/include
+ /apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/include-fixed
+ /usr/include
+End of search list.
+COMPILER_PATH=/apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/8.1.0/:/apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/8.1.0/:/apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib64/../lib64/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib/../lib64/:/apps/2021/opencv/4.5.2-contrib/lib64/../lib64/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/apps/2021/llvm/11.0.0/lib/:/apps/2021/llvm/11.0.0/libexec/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib64/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libelf-0.8.13-m5ndvdx7mc7al3xfq2venrdfo2laoy3g/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/isl-0.18-zwfd4x6n3v3vads3ncukk5mtgt6xv2qj/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpc-1.1.0-ijex5qs7pt44n7whqlgwqj4jwc3czkac/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpfr-4.0.2-yfoprebczoqpokivqgmnjn5os4r7mxw6/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gmp-6.1.2-raqmdaosldybjrn6y2xnnnyy2f63hg6b/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/openssl-1.1.1h-iwybd6raqg2jisesulhn4eq4u6pua4r5/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/zlib-1.2.11-cd5sn7qr4dpsl52yco7o4un6svatshid/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/ncurses-6.2-hjedt2uy7o2piyycr3ttni2puoezbfu6/lib/:/apps/2021/opencv/4.5.2-contrib/lib64/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-std=c++14' '-E' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=10' '-D' '__CUDACC_VER_MINOR__=1' '-D' '__CUDACC_VER_BUILD__=105' '-include' 'cuda_runtime.h' '-m64' '-mtune=generic' '-march=x86-64'
+Using built-in specs.
+COLLECT_GCC=gcc
+Target: x86_64-pc-linux-gnu
+Configured with: ./configure --prefix=/apps/2021/gcc/8.1.0/ --with-gmp=/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gmp-6.1.2-raqmdaosldybjrn6y2xnnnyy2f63hg6b --with-mpfr=/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpfr-4.0.2-yfoprebczoqpokivqgmnjn5os4r7mxw6 --with-mpc=/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpc-1.1.0-ijex5qs7pt44n7whqlgwqj4jwc3czkac --with-isl=/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/isl-0.18-zwfd4x6n3v3vads3ncukk5mtgt6xv2qj --disable-multilib
+Thread model: posix
+gcc version 8.1.0 (GCC) 
+COLLECT_GCC_OPTIONS='-std=c++14' '-D' '__CUDA_ARCH__=300' '-c' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-v' '-I' '/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include' '-m64' '-o' 'CMakeFiles/cmTC_39c5c.dir/CMakeCUDACompilerABI.cu.o' '-mtune=generic' '-march=x86-64'
+ /apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/8.1.0/cc1plus -quiet -v -I /apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include -D_GNU_SOURCE -D __CUDA_ARCH__=300 -D CUDA_DOUBLE_MATH_FUNCTIONS /tmp/tmpxft_0000d258_00000000-5_CMakeCUDACompilerABI.cudafe1.cpp -quiet -dumpbase tmpxft_0000d258_00000000-5_CMakeCUDACompilerABI.cudafe1.cpp -m64 -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_39c5c.dir/CMakeCUDACompilerABI.cu.o -std=c++14 -version -o /tmp/ccBH0ITI.s
+GNU C++14 (GCC) version 8.1.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 8.1.0, GMP version 6.1.2, MPFR version 4.0.2-p9, MPC version 1.1.0, isl version isl-0.18-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../x86_64-pc-linux-gnu/include"
+ignoring duplicate directory "/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include"
+  as it is a non-system directory that duplicates a system directory
+ignoring duplicate directory "/apps/2021/cuda/10.1/include"
+  as it is a non-system directory that duplicates a system directory
+#include "..." search starts here:
+#include <...> search starts here:
+ /apps/2021/opencv/4.5.2-contrib/include/opencv4
+ /apps/2021/llvm/11.0.0/include
+ /apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/include
+ /apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libelf-0.8.13-m5ndvdx7mc7al3xfq2venrdfo2laoy3g/include
+ /apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/isl-0.18-zwfd4x6n3v3vads3ncukk5mtgt6xv2qj/include
+ /apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpc-1.1.0-ijex5qs7pt44n7whqlgwqj4jwc3czkac/include
+ /apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpfr-4.0.2-yfoprebczoqpokivqgmnjn5os4r7mxw6/include
+ /apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gmp-6.1.2-raqmdaosldybjrn6y2xnnnyy2f63hg6b/include
+ /apps/2021/cuda/10.1/include
+ /apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/openssl-1.1.1h-iwybd6raqg2jisesulhn4eq4u6pua4r5/include
+ /apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/zlib-1.2.11-cd5sn7qr4dpsl52yco7o4un6svatshid/include
+ /apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/ncurses-6.2-hjedt2uy7o2piyycr3ttni2puoezbfu6/include
+ /apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../include/c++/8.1.0
+ /apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../include/c++/8.1.0/x86_64-pc-linux-gnu
+ /apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../include/c++/8.1.0/backward
+ /apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/include
+ /usr/local/include
+ /apps/2021/gcc/8.1.0/include
+ /apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/include-fixed
+ /usr/include
+End of search list.
+GNU C++14 (GCC) version 8.1.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 8.1.0, GMP version 6.1.2, MPFR version 4.0.2-p9, MPC version 1.1.0, isl version isl-0.18-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 3f5bb770f147fdf96bab216fdef42b4e
+COLLECT_GCC_OPTIONS='-std=c++14' '-D' '__CUDA_ARCH__=300' '-c' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-v' '-I' '/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include' '-m64' '-o' 'CMakeFiles/cmTC_39c5c.dir/CMakeCUDACompilerABI.cu.o' '-mtune=generic' '-march=x86-64'
+ as -v -I /apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include --64 -o CMakeFiles/cmTC_39c5c.dir/CMakeCUDACompilerABI.cu.o /tmp/ccBH0ITI.s
+GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-44.base.el7
+COMPILER_PATH=/apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/8.1.0/:/apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/8.1.0/:/apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib64/../lib64/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib/../lib64/:/apps/2021/opencv/4.5.2-contrib/lib64/../lib64/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/apps/2021/llvm/11.0.0/lib/:/apps/2021/llvm/11.0.0/libexec/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib64/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libelf-0.8.13-m5ndvdx7mc7al3xfq2venrdfo2laoy3g/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/isl-0.18-zwfd4x6n3v3vads3ncukk5mtgt6xv2qj/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpc-1.1.0-ijex5qs7pt44n7whqlgwqj4jwc3czkac/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpfr-4.0.2-yfoprebczoqpokivqgmnjn5os4r7mxw6/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gmp-6.1.2-raqmdaosldybjrn6y2xnnnyy2f63hg6b/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/openssl-1.1.1h-iwybd6raqg2jisesulhn4eq4u6pua4r5/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/zlib-1.2.11-cd5sn7qr4dpsl52yco7o4un6svatshid/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/ncurses-6.2-hjedt2uy7o2piyycr3ttni2puoezbfu6/lib/:/apps/2021/opencv/4.5.2-contrib/lib64/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-std=c++14' '-D' '__CUDA_ARCH__=300' '-c' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-v' '-I' '/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include' '-m64' '-o' 'CMakeFiles/cmTC_39c5c.dir/CMakeCUDACompilerABI.cu.o' '-mtune=generic' '-march=x86-64'
+Linking CUDA executable cmTC_39c5c
+/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/cmake-3.18.4-kw3wpvkxke7lo3atixjcvt4roclfopip/bin/cmake -E cmake_link_script CMakeFiles/cmTC_39c5c.dir/link.txt --verbose=1
+/apps/2021/gcc/8.1.0/bin/g++  -v CMakeFiles/cmTC_39c5c.dir/CMakeCUDACompilerABI.cu.o -o cmTC_39c5c  -lcudadevrt -lcudart_static -lrt -lpthread -ldl  -L"/apps/2021/cuda/10.1/targets/x86_64-linux/lib/stubs" -L"/apps/2021/cuda/10.1/targets/x86_64-linux/lib"
+Using built-in specs.
+COLLECT_GCC=/apps/2021/gcc/8.1.0/bin/g++
+COLLECT_LTO_WRAPPER=/apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/8.1.0/lto-wrapper
+Target: x86_64-pc-linux-gnu
+Configured with: ./configure --prefix=/apps/2021/gcc/8.1.0/ --with-gmp=/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gmp-6.1.2-raqmdaosldybjrn6y2xnnnyy2f63hg6b --with-mpfr=/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpfr-4.0.2-yfoprebczoqpokivqgmnjn5os4r7mxw6 --with-mpc=/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpc-1.1.0-ijex5qs7pt44n7whqlgwqj4jwc3czkac --with-isl=/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/isl-0.18-zwfd4x6n3v3vads3ncukk5mtgt6xv2qj --disable-multilib
+Thread model: posix
+gcc version 8.1.0 (GCC) 
+COMPILER_PATH=/apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/8.1.0/:/apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/8.1.0/:/apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib64/../lib64/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib/../lib64/:/apps/2021/opencv/4.5.2-contrib/lib64/../lib64/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/apps/2021/llvm/11.0.0/lib/:/apps/2021/llvm/11.0.0/libexec/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib64/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libelf-0.8.13-m5ndvdx7mc7al3xfq2venrdfo2laoy3g/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/isl-0.18-zwfd4x6n3v3vads3ncukk5mtgt6xv2qj/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpc-1.1.0-ijex5qs7pt44n7whqlgwqj4jwc3czkac/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpfr-4.0.2-yfoprebczoqpokivqgmnjn5os4r7mxw6/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gmp-6.1.2-raqmdaosldybjrn6y2xnnnyy2f63hg6b/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/openssl-1.1.1h-iwybd6raqg2jisesulhn4eq4u6pua4r5/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/zlib-1.2.11-cd5sn7qr4dpsl52yco7o4un6svatshid/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/ncurses-6.2-hjedt2uy7o2piyycr3ttni2puoezbfu6/lib/:/apps/2021/opencv/4.5.2-contrib/lib64/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_39c5c' '-L/apps/2021/cuda/10.1/targets/x86_64-linux/lib/stubs' '-L/apps/2021/cuda/10.1/targets/x86_64-linux/lib' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/8.1.0/collect2 -plugin /apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/8.1.0/liblto_plugin.so -plugin-opt=/apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/8.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccgXEMJP.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_39c5c /lib/../lib64/crt1.o /lib/../lib64/crti.o /apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/crtbegin.o -L/apps/2021/cuda/10.1/targets/x86_64-linux/lib/stubs -L/apps/2021/cuda/10.1/targets/x86_64-linux/lib -L/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib64/../lib64 -L/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib/../lib64 -L/apps/2021/opencv/4.5.2-contrib/lib64/../lib64 -L/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0 -L/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/apps/2021/llvm/11.0.0/lib -L/apps/2021/llvm/11.0.0/libexec -L/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib64 -L/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib -L/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libelf-0.8.13-m5ndvdx7mc7al3xfq2venrdfo2laoy3g/lib -L/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/isl-0.18-zwfd4x6n3v3vads3ncukk5mtgt6xv2qj/lib -L/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpc-1.1.0-ijex5qs7pt44n7whqlgwqj4jwc3czkac/lib -L/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpfr-4.0.2-yfoprebczoqpokivqgmnjn5os4r7mxw6/lib -L/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gmp-6.1.2-raqmdaosldybjrn6y2xnnnyy2f63hg6b/lib -L/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/openssl-1.1.1h-iwybd6raqg2jisesulhn4eq4u6pua4r5/lib -L/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/zlib-1.2.11-cd5sn7qr4dpsl52yco7o4un6svatshid/lib -L/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/ncurses-6.2-hjedt2uy7o2piyycr3ttni2puoezbfu6/lib -L/apps/2021/opencv/4.5.2-contrib/lib64 -L/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../.. CMakeFiles/cmTC_39c5c.dir/CMakeCUDACompilerABI.cu.o -lcudadevrt -lcudart_static -lrt -lpthread -ldl -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/crtend.o /lib/../lib64/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_39c5c' '-L/apps/2021/cuda/10.1/targets/x86_64-linux/lib/stubs' '-L/apps/2021/cuda/10.1/targets/x86_64-linux/lib' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+gmake[1]: Leaving directory `/home/groubahiefissa/chps/chps0801_projet/kokkos/parallel/jacobi/build-gpu/Kokkos/CMakeFiles/CheckCUDA/CMakeFiles/CMakeTmp'
+
+
+
+Parsed CUDA implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/apps/2021/opencv/4.5.2-contrib/include/opencv4]
+    add: [/apps/2021/llvm/11.0.0/include]
+    add: [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/include]
+    add: [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libelf-0.8.13-m5ndvdx7mc7al3xfq2venrdfo2laoy3g/include]
+    add: [/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/isl-0.18-zwfd4x6n3v3vads3ncukk5mtgt6xv2qj/include]
+    add: [/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpc-1.1.0-ijex5qs7pt44n7whqlgwqj4jwc3czkac/include]
+    add: [/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpfr-4.0.2-yfoprebczoqpokivqgmnjn5os4r7mxw6/include]
+    add: [/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gmp-6.1.2-raqmdaosldybjrn6y2xnnnyy2f63hg6b/include]
+    add: [/apps/2021/cuda/10.1/include]
+    add: [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/openssl-1.1.1h-iwybd6raqg2jisesulhn4eq4u6pua4r5/include]
+    add: [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/zlib-1.2.11-cd5sn7qr4dpsl52yco7o4un6svatshid/include]
+    add: [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/ncurses-6.2-hjedt2uy7o2piyycr3ttni2puoezbfu6/include]
+    add: [/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../include/c++/8.1.0]
+    add: [/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../include/c++/8.1.0/x86_64-pc-linux-gnu]
+    add: [/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../include/c++/8.1.0/backward]
+    add: [/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/include]
+    add: [/usr/local/include]
+    add: [/apps/2021/gcc/8.1.0/include]
+    add: [/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/include-fixed]
+    add: [/usr/include]
+  end of search list found
+  collapse include dir [/apps/2021/opencv/4.5.2-contrib/include/opencv4] ==> [/apps/2021/opencv/4.5.2-contrib/include/opencv4]
+  collapse include dir [/apps/2021/llvm/11.0.0/include] ==> [/apps/2021/llvm/11.0.0/include]
+  collapse include dir [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/include] ==> [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/include]
+  collapse include dir [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libelf-0.8.13-m5ndvdx7mc7al3xfq2venrdfo2laoy3g/include] ==> [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libelf-0.8.13-m5ndvdx7mc7al3xfq2venrdfo2laoy3g/include]
+  collapse include dir [/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/isl-0.18-zwfd4x6n3v3vads3ncukk5mtgt6xv2qj/include] ==> [/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/isl-0.18-zwfd4x6n3v3vads3ncukk5mtgt6xv2qj/include]
+  collapse include dir [/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpc-1.1.0-ijex5qs7pt44n7whqlgwqj4jwc3czkac/include] ==> [/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpc-1.1.0-ijex5qs7pt44n7whqlgwqj4jwc3czkac/include]
+  collapse include dir [/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpfr-4.0.2-yfoprebczoqpokivqgmnjn5os4r7mxw6/include] ==> [/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpfr-4.0.2-yfoprebczoqpokivqgmnjn5os4r7mxw6/include]
+  collapse include dir [/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gmp-6.1.2-raqmdaosldybjrn6y2xnnnyy2f63hg6b/include] ==> [/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gmp-6.1.2-raqmdaosldybjrn6y2xnnnyy2f63hg6b/include]
+  collapse include dir [/apps/2021/cuda/10.1/include] ==> [/apps/2021/cuda/10.1/include]
+  collapse include dir [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/openssl-1.1.1h-iwybd6raqg2jisesulhn4eq4u6pua4r5/include] ==> [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/openssl-1.1.1h-iwybd6raqg2jisesulhn4eq4u6pua4r5/include]
+  collapse include dir [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/zlib-1.2.11-cd5sn7qr4dpsl52yco7o4un6svatshid/include] ==> [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/zlib-1.2.11-cd5sn7qr4dpsl52yco7o4un6svatshid/include]
+  collapse include dir [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/ncurses-6.2-hjedt2uy7o2piyycr3ttni2puoezbfu6/include] ==> [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/ncurses-6.2-hjedt2uy7o2piyycr3ttni2puoezbfu6/include]
+  collapse include dir [/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../include/c++/8.1.0] ==> [/apps/2021/gcc/8.1.0/include/c++/8.1.0]
+  collapse include dir [/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../include/c++/8.1.0/x86_64-pc-linux-gnu] ==> [/apps/2021/gcc/8.1.0/include/c++/8.1.0/x86_64-pc-linux-gnu]
+  collapse include dir [/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../include/c++/8.1.0/backward] ==> [/apps/2021/gcc/8.1.0/include/c++/8.1.0/backward]
+  collapse include dir [/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/include] ==> [/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/include]
+  collapse include dir [/usr/local/include] ==> [/usr/local/include]
+  collapse include dir [/apps/2021/gcc/8.1.0/include] ==> [/apps/2021/gcc/8.1.0/include]
+  collapse include dir [/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/include-fixed] ==> [/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/include-fixed]
+  collapse include dir [/usr/include] ==> [/usr/include]
+  implicit include dirs: [/apps/2021/opencv/4.5.2-contrib/include/opencv4;/apps/2021/llvm/11.0.0/include;/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/include;/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libelf-0.8.13-m5ndvdx7mc7al3xfq2venrdfo2laoy3g/include;/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/isl-0.18-zwfd4x6n3v3vads3ncukk5mtgt6xv2qj/include;/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpc-1.1.0-ijex5qs7pt44n7whqlgwqj4jwc3czkac/include;/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpfr-4.0.2-yfoprebczoqpokivqgmnjn5os4r7mxw6/include;/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gmp-6.1.2-raqmdaosldybjrn6y2xnnnyy2f63hg6b/include;/apps/2021/cuda/10.1/include;/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/openssl-1.1.1h-iwybd6raqg2jisesulhn4eq4u6pua4r5/include;/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/zlib-1.2.11-cd5sn7qr4dpsl52yco7o4un6svatshid/include;/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/ncurses-6.2-hjedt2uy7o2piyycr3ttni2puoezbfu6/include;/apps/2021/gcc/8.1.0/include/c++/8.1.0;/apps/2021/gcc/8.1.0/include/c++/8.1.0/x86_64-pc-linux-gnu;/apps/2021/gcc/8.1.0/include/c++/8.1.0/backward;/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/include;/usr/local/include;/apps/2021/gcc/8.1.0/include;/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/include-fixed;/usr/include]
+
+
+Parsed CUDA implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/groubahiefissa/chps/chps0801_projet/kokkos/parallel/jacobi/build-gpu/Kokkos/CMakeFiles/CheckCUDA/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/gmake cmTC_39c5c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_39c5c.dir/build.make CMakeFiles/cmTC_39c5c.dir/build]
+  ignore line: [gmake[1]: Entering directory `/home/groubahiefissa/chps/chps0801_projet/kokkos/parallel/jacobi/build-gpu/Kokkos/CMakeFiles/CheckCUDA/CMakeFiles/CMakeTmp']
+  ignore line: [Building CUDA object CMakeFiles/cmTC_39c5c.dir/CMakeCUDACompilerABI.cu.o]
+  ignore line: [/apps/2021/cuda/10.1/bin/nvcc    --generate-code=arch=compute_30 code=[compute_30 sm_30]   -Xcompiler=-v -x cu -c /apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/cmake-3.18.4-kw3wpvkxke7lo3atixjcvt4roclfopip/share/cmake-3.18/Modules/CMakeCUDACompilerABI.cu -o CMakeFiles/cmTC_39c5c.dir/CMakeCUDACompilerABI.cu.o]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=gcc]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ./configure --prefix=/apps/2021/gcc/8.1.0/ --with-gmp=/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gmp-6.1.2-raqmdaosldybjrn6y2xnnnyy2f63hg6b --with-mpfr=/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpfr-4.0.2-yfoprebczoqpokivqgmnjn5os4r7mxw6 --with-mpc=/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpc-1.1.0-ijex5qs7pt44n7whqlgwqj4jwc3czkac --with-isl=/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/isl-0.18-zwfd4x6n3v3vads3ncukk5mtgt6xv2qj --disable-multilib]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 8.1.0 (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-std=c++14' '-D' '__CUDA_ARCH__=300' '-E' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=10' '-D' '__CUDACC_VER_MINOR__=1' '-D' '__CUDACC_VER_BUILD__=105' '-include' 'cuda_runtime.h' '-m64' '-mtune=generic' '-march=x86-64']
+  ignore line: [ /apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/8.1.0/cc1plus -E -quiet -v -I /apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include -D_GNU_SOURCE -D __CUDA_ARCH__=300 -D CUDA_DOUBLE_MATH_FUNCTIONS -D __CUDACC__ -D __NVCC__ -D __CUDACC_VER_MAJOR__=10 -D __CUDACC_VER_MINOR__=1 -D __CUDACC_VER_BUILD__=105 -include cuda_runtime.h /apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/cmake-3.18.4-kw3wpvkxke7lo3atixjcvt4roclfopip/share/cmake-3.18/Modules/CMakeCUDACompilerABI.cu -m64 -mtune=generic -march=x86-64 -std=c++14]
+  ignore line: [ignoring nonexistent directory "/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../x86_64-pc-linux-gnu/include"]
+  ignore line: [ignoring duplicate directory "/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include"]
+  ignore line: [  as it is a non-system directory that duplicates a system directory]
+  ignore line: [ignoring duplicate directory "/apps/2021/cuda/10.1/include"]
+  ignore line: [  as it is a non-system directory that duplicates a system directory]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /apps/2021/opencv/4.5.2-contrib/include/opencv4]
+  ignore line: [ /apps/2021/llvm/11.0.0/include]
+  ignore line: [ /apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/include]
+  ignore line: [ /apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libelf-0.8.13-m5ndvdx7mc7al3xfq2venrdfo2laoy3g/include]
+  ignore line: [ /apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/isl-0.18-zwfd4x6n3v3vads3ncukk5mtgt6xv2qj/include]
+  ignore line: [ /apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpc-1.1.0-ijex5qs7pt44n7whqlgwqj4jwc3czkac/include]
+  ignore line: [ /apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpfr-4.0.2-yfoprebczoqpokivqgmnjn5os4r7mxw6/include]
+  ignore line: [ /apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gmp-6.1.2-raqmdaosldybjrn6y2xnnnyy2f63hg6b/include]
+  ignore line: [ /apps/2021/cuda/10.1/include]
+  ignore line: [ /apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/openssl-1.1.1h-iwybd6raqg2jisesulhn4eq4u6pua4r5/include]
+  ignore line: [ /apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/zlib-1.2.11-cd5sn7qr4dpsl52yco7o4un6svatshid/include]
+  ignore line: [ /apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/ncurses-6.2-hjedt2uy7o2piyycr3ttni2puoezbfu6/include]
+  ignore line: [ /apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../include/c++/8.1.0]
+  ignore line: [ /apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../include/c++/8.1.0/x86_64-pc-linux-gnu]
+  ignore line: [ /apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../include/c++/8.1.0/backward]
+  ignore line: [ /apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /apps/2021/gcc/8.1.0/include]
+  ignore line: [ /apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/include-fixed]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [COMPILER_PATH=/apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/8.1.0/:/apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/8.1.0/:/apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib64/../lib64/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib/../lib64/:/apps/2021/opencv/4.5.2-contrib/lib64/../lib64/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/apps/2021/llvm/11.0.0/lib/:/apps/2021/llvm/11.0.0/libexec/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib64/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libelf-0.8.13-m5ndvdx7mc7al3xfq2venrdfo2laoy3g/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/isl-0.18-zwfd4x6n3v3vads3ncukk5mtgt6xv2qj/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpc-1.1.0-ijex5qs7pt44n7whqlgwqj4jwc3czkac/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpfr-4.0.2-yfoprebczoqpokivqgmnjn5os4r7mxw6/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gmp-6.1.2-raqmdaosldybjrn6y2xnnnyy2f63hg6b/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/openssl-1.1.1h-iwybd6raqg2jisesulhn4eq4u6pua4r5/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/zlib-1.2.11-cd5sn7qr4dpsl52yco7o4un6svatshid/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/ncurses-6.2-hjedt2uy7o2piyycr3ttni2puoezbfu6/lib/:/apps/2021/opencv/4.5.2-contrib/lib64/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-std=c++14' '-D' '__CUDA_ARCH__=300' '-E' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=10' '-D' '__CUDACC_VER_MINOR__=1' '-D' '__CUDACC_VER_BUILD__=105' '-include' 'cuda_runtime.h' '-m64' '-mtune=generic' '-march=x86-64']
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=gcc]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ./configure --prefix=/apps/2021/gcc/8.1.0/ --with-gmp=/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gmp-6.1.2-raqmdaosldybjrn6y2xnnnyy2f63hg6b --with-mpfr=/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpfr-4.0.2-yfoprebczoqpokivqgmnjn5os4r7mxw6 --with-mpc=/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpc-1.1.0-ijex5qs7pt44n7whqlgwqj4jwc3czkac --with-isl=/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/isl-0.18-zwfd4x6n3v3vads3ncukk5mtgt6xv2qj --disable-multilib]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 8.1.0 (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-std=c++14' '-E' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=10' '-D' '__CUDACC_VER_MINOR__=1' '-D' '__CUDACC_VER_BUILD__=105' '-include' 'cuda_runtime.h' '-m64' '-mtune=generic' '-march=x86-64']
+  ignore line: [ /apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/8.1.0/cc1plus -E -quiet -v -I /apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include -D_GNU_SOURCE -D __CUDACC__ -D __NVCC__ -D __CUDACC_VER_MAJOR__=10 -D __CUDACC_VER_MINOR__=1 -D __CUDACC_VER_BUILD__=105 -include cuda_runtime.h /apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/cmake-3.18.4-kw3wpvkxke7lo3atixjcvt4roclfopip/share/cmake-3.18/Modules/CMakeCUDACompilerABI.cu -m64 -mtune=generic -march=x86-64 -std=c++14]
+  ignore line: [ignoring nonexistent directory "/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../x86_64-pc-linux-gnu/include"]
+  ignore line: [ignoring duplicate directory "/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include"]
+  ignore line: [  as it is a non-system directory that duplicates a system directory]
+  ignore line: [ignoring duplicate directory "/apps/2021/cuda/10.1/include"]
+  ignore line: [  as it is a non-system directory that duplicates a system directory]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /apps/2021/opencv/4.5.2-contrib/include/opencv4]
+  ignore line: [ /apps/2021/llvm/11.0.0/include]
+  ignore line: [ /apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/include]
+  ignore line: [ /apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libelf-0.8.13-m5ndvdx7mc7al3xfq2venrdfo2laoy3g/include]
+  ignore line: [ /apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/isl-0.18-zwfd4x6n3v3vads3ncukk5mtgt6xv2qj/include]
+  ignore line: [ /apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpc-1.1.0-ijex5qs7pt44n7whqlgwqj4jwc3czkac/include]
+  ignore line: [ /apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpfr-4.0.2-yfoprebczoqpokivqgmnjn5os4r7mxw6/include]
+  ignore line: [ /apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gmp-6.1.2-raqmdaosldybjrn6y2xnnnyy2f63hg6b/include]
+  ignore line: [ /apps/2021/cuda/10.1/include]
+  ignore line: [ /apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/openssl-1.1.1h-iwybd6raqg2jisesulhn4eq4u6pua4r5/include]
+  ignore line: [ /apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/zlib-1.2.11-cd5sn7qr4dpsl52yco7o4un6svatshid/include]
+  ignore line: [ /apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/ncurses-6.2-hjedt2uy7o2piyycr3ttni2puoezbfu6/include]
+  ignore line: [ /apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../include/c++/8.1.0]
+  ignore line: [ /apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../include/c++/8.1.0/x86_64-pc-linux-gnu]
+  ignore line: [ /apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../include/c++/8.1.0/backward]
+  ignore line: [ /apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /apps/2021/gcc/8.1.0/include]
+  ignore line: [ /apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/include-fixed]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [COMPILER_PATH=/apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/8.1.0/:/apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/8.1.0/:/apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib64/../lib64/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib/../lib64/:/apps/2021/opencv/4.5.2-contrib/lib64/../lib64/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/apps/2021/llvm/11.0.0/lib/:/apps/2021/llvm/11.0.0/libexec/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib64/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libelf-0.8.13-m5ndvdx7mc7al3xfq2venrdfo2laoy3g/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/isl-0.18-zwfd4x6n3v3vads3ncukk5mtgt6xv2qj/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpc-1.1.0-ijex5qs7pt44n7whqlgwqj4jwc3czkac/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpfr-4.0.2-yfoprebczoqpokivqgmnjn5os4r7mxw6/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gmp-6.1.2-raqmdaosldybjrn6y2xnnnyy2f63hg6b/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/openssl-1.1.1h-iwybd6raqg2jisesulhn4eq4u6pua4r5/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/zlib-1.2.11-cd5sn7qr4dpsl52yco7o4un6svatshid/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/ncurses-6.2-hjedt2uy7o2piyycr3ttni2puoezbfu6/lib/:/apps/2021/opencv/4.5.2-contrib/lib64/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-std=c++14' '-E' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=10' '-D' '__CUDACC_VER_MINOR__=1' '-D' '__CUDACC_VER_BUILD__=105' '-include' 'cuda_runtime.h' '-m64' '-mtune=generic' '-march=x86-64']
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=gcc]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ./configure --prefix=/apps/2021/gcc/8.1.0/ --with-gmp=/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gmp-6.1.2-raqmdaosldybjrn6y2xnnnyy2f63hg6b --with-mpfr=/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpfr-4.0.2-yfoprebczoqpokivqgmnjn5os4r7mxw6 --with-mpc=/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpc-1.1.0-ijex5qs7pt44n7whqlgwqj4jwc3czkac --with-isl=/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/isl-0.18-zwfd4x6n3v3vads3ncukk5mtgt6xv2qj --disable-multilib]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 8.1.0 (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-std=c++14' '-D' '__CUDA_ARCH__=300' '-c' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-v' '-I' '/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include' '-m64' '-o' 'CMakeFiles/cmTC_39c5c.dir/CMakeCUDACompilerABI.cu.o' '-mtune=generic' '-march=x86-64']
+  ignore line: [ /apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/8.1.0/cc1plus -quiet -v -I /apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include -D_GNU_SOURCE -D __CUDA_ARCH__=300 -D CUDA_DOUBLE_MATH_FUNCTIONS /tmp/tmpxft_0000d258_00000000-5_CMakeCUDACompilerABI.cudafe1.cpp -quiet -dumpbase tmpxft_0000d258_00000000-5_CMakeCUDACompilerABI.cudafe1.cpp -m64 -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_39c5c.dir/CMakeCUDACompilerABI.cu.o -std=c++14 -version -o /tmp/ccBH0ITI.s]
+  ignore line: [GNU C++14 (GCC) version 8.1.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 8.1.0  GMP version 6.1.2  MPFR version 4.0.2-p9  MPC version 1.1.0  isl version isl-0.18-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../x86_64-pc-linux-gnu/include"]
+  ignore line: [ignoring duplicate directory "/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include"]
+  ignore line: [  as it is a non-system directory that duplicates a system directory]
+  ignore line: [ignoring duplicate directory "/apps/2021/cuda/10.1/include"]
+  ignore line: [  as it is a non-system directory that duplicates a system directory]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /apps/2021/opencv/4.5.2-contrib/include/opencv4]
+  ignore line: [ /apps/2021/llvm/11.0.0/include]
+  ignore line: [ /apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/include]
+  ignore line: [ /apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libelf-0.8.13-m5ndvdx7mc7al3xfq2venrdfo2laoy3g/include]
+  ignore line: [ /apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/isl-0.18-zwfd4x6n3v3vads3ncukk5mtgt6xv2qj/include]
+  ignore line: [ /apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpc-1.1.0-ijex5qs7pt44n7whqlgwqj4jwc3czkac/include]
+  ignore line: [ /apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpfr-4.0.2-yfoprebczoqpokivqgmnjn5os4r7mxw6/include]
+  ignore line: [ /apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gmp-6.1.2-raqmdaosldybjrn6y2xnnnyy2f63hg6b/include]
+  ignore line: [ /apps/2021/cuda/10.1/include]
+  ignore line: [ /apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/openssl-1.1.1h-iwybd6raqg2jisesulhn4eq4u6pua4r5/include]
+  ignore line: [ /apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/zlib-1.2.11-cd5sn7qr4dpsl52yco7o4un6svatshid/include]
+  ignore line: [ /apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/ncurses-6.2-hjedt2uy7o2piyycr3ttni2puoezbfu6/include]
+  ignore line: [ /apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../include/c++/8.1.0]
+  ignore line: [ /apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../include/c++/8.1.0/x86_64-pc-linux-gnu]
+  ignore line: [ /apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../include/c++/8.1.0/backward]
+  ignore line: [ /apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /apps/2021/gcc/8.1.0/include]
+  ignore line: [ /apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/include-fixed]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C++14 (GCC) version 8.1.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 8.1.0  GMP version 6.1.2  MPFR version 4.0.2-p9  MPC version 1.1.0  isl version isl-0.18-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: 3f5bb770f147fdf96bab216fdef42b4e]
+  ignore line: [COLLECT_GCC_OPTIONS='-std=c++14' '-D' '__CUDA_ARCH__=300' '-c' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-v' '-I' '/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include' '-m64' '-o' 'CMakeFiles/cmTC_39c5c.dir/CMakeCUDACompilerABI.cu.o' '-mtune=generic' '-march=x86-64']
+  ignore line: [ as -v -I /apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include --64 -o CMakeFiles/cmTC_39c5c.dir/CMakeCUDACompilerABI.cu.o /tmp/ccBH0ITI.s]
+  ignore line: [GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-44.base.el7]
+  ignore line: [COMPILER_PATH=/apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/8.1.0/:/apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/8.1.0/:/apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib64/../lib64/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib/../lib64/:/apps/2021/opencv/4.5.2-contrib/lib64/../lib64/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/apps/2021/llvm/11.0.0/lib/:/apps/2021/llvm/11.0.0/libexec/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib64/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libelf-0.8.13-m5ndvdx7mc7al3xfq2venrdfo2laoy3g/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/isl-0.18-zwfd4x6n3v3vads3ncukk5mtgt6xv2qj/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpc-1.1.0-ijex5qs7pt44n7whqlgwqj4jwc3czkac/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpfr-4.0.2-yfoprebczoqpokivqgmnjn5os4r7mxw6/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gmp-6.1.2-raqmdaosldybjrn6y2xnnnyy2f63hg6b/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/openssl-1.1.1h-iwybd6raqg2jisesulhn4eq4u6pua4r5/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/zlib-1.2.11-cd5sn7qr4dpsl52yco7o4un6svatshid/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/ncurses-6.2-hjedt2uy7o2piyycr3ttni2puoezbfu6/lib/:/apps/2021/opencv/4.5.2-contrib/lib64/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-std=c++14' '-D' '__CUDA_ARCH__=300' '-c' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-v' '-I' '/apps/2021/cuda/10.1/bin/../targets/x86_64-linux/include' '-m64' '-o' 'CMakeFiles/cmTC_39c5c.dir/CMakeCUDACompilerABI.cu.o' '-mtune=generic' '-march=x86-64']
+  ignore line: [Linking CUDA executable cmTC_39c5c]
+  ignore line: [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/cmake-3.18.4-kw3wpvkxke7lo3atixjcvt4roclfopip/bin/cmake -E cmake_link_script CMakeFiles/cmTC_39c5c.dir/link.txt --verbose=1]
+  ignore line: [/apps/2021/gcc/8.1.0/bin/g++  -v CMakeFiles/cmTC_39c5c.dir/CMakeCUDACompilerABI.cu.o -o cmTC_39c5c  -lcudadevrt -lcudart_static -lrt -lpthread -ldl  -L"/apps/2021/cuda/10.1/targets/x86_64-linux/lib/stubs" -L"/apps/2021/cuda/10.1/targets/x86_64-linux/lib"]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/apps/2021/gcc/8.1.0/bin/g++]
+  ignore line: [COLLECT_LTO_WRAPPER=/apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/8.1.0/lto-wrapper]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ./configure --prefix=/apps/2021/gcc/8.1.0/ --with-gmp=/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gmp-6.1.2-raqmdaosldybjrn6y2xnnnyy2f63hg6b --with-mpfr=/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpfr-4.0.2-yfoprebczoqpokivqgmnjn5os4r7mxw6 --with-mpc=/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpc-1.1.0-ijex5qs7pt44n7whqlgwqj4jwc3czkac --with-isl=/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/isl-0.18-zwfd4x6n3v3vads3ncukk5mtgt6xv2qj --disable-multilib]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 8.1.0 (GCC) ]
+  ignore line: [COMPILER_PATH=/apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/8.1.0/:/apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/8.1.0/:/apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib64/../lib64/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib/../lib64/:/apps/2021/opencv/4.5.2-contrib/lib64/../lib64/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/apps/2021/llvm/11.0.0/lib/:/apps/2021/llvm/11.0.0/libexec/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib64/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libelf-0.8.13-m5ndvdx7mc7al3xfq2venrdfo2laoy3g/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/isl-0.18-zwfd4x6n3v3vads3ncukk5mtgt6xv2qj/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpc-1.1.0-ijex5qs7pt44n7whqlgwqj4jwc3czkac/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpfr-4.0.2-yfoprebczoqpokivqgmnjn5os4r7mxw6/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gmp-6.1.2-raqmdaosldybjrn6y2xnnnyy2f63hg6b/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/openssl-1.1.1h-iwybd6raqg2jisesulhn4eq4u6pua4r5/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/zlib-1.2.11-cd5sn7qr4dpsl52yco7o4un6svatshid/lib/:/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/ncurses-6.2-hjedt2uy7o2piyycr3ttni2puoezbfu6/lib/:/apps/2021/opencv/4.5.2-contrib/lib64/:/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_39c5c' '-L/apps/2021/cuda/10.1/targets/x86_64-linux/lib/stubs' '-L/apps/2021/cuda/10.1/targets/x86_64-linux/lib' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/8.1.0/collect2 -plugin /apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/8.1.0/liblto_plugin.so -plugin-opt=/apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/8.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccgXEMJP.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_39c5c /lib/../lib64/crt1.o /lib/../lib64/crti.o /apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/crtbegin.o -L/apps/2021/cuda/10.1/targets/x86_64-linux/lib/stubs -L/apps/2021/cuda/10.1/targets/x86_64-linux/lib -L/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib64/../lib64 -L/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib/../lib64 -L/apps/2021/opencv/4.5.2-contrib/lib64/../lib64 -L/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0 -L/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/apps/2021/llvm/11.0.0/lib -L/apps/2021/llvm/11.0.0/libexec -L/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib64 -L/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib -L/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libelf-0.8.13-m5ndvdx7mc7al3xfq2venrdfo2laoy3g/lib -L/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/isl-0.18-zwfd4x6n3v3vads3ncukk5mtgt6xv2qj/lib -L/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpc-1.1.0-ijex5qs7pt44n7whqlgwqj4jwc3czkac/lib -L/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpfr-4.0.2-yfoprebczoqpokivqgmnjn5os4r7mxw6/lib -L/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gmp-6.1.2-raqmdaosldybjrn6y2xnnnyy2f63hg6b/lib -L/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/openssl-1.1.1h-iwybd6raqg2jisesulhn4eq4u6pua4r5/lib -L/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/zlib-1.2.11-cd5sn7qr4dpsl52yco7o4un6svatshid/lib -L/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/ncurses-6.2-hjedt2uy7o2piyycr3ttni2puoezbfu6/lib -L/apps/2021/opencv/4.5.2-contrib/lib64 -L/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../.. CMakeFiles/cmTC_39c5c.dir/CMakeCUDACompilerABI.cu.o -lcudadevrt -lcudart_static -lrt -lpthread -ldl -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/crtend.o /lib/../lib64/crtn.o]
+    arg [/apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/8.1.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/8.1.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/apps/2021/gcc/8.1.0/libexec/gcc/x86_64-pc-linux-gnu/8.1.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccgXEMJP.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_39c5c] ==> ignore
+    arg [/lib/../lib64/crt1.o] ==> ignore
+    arg [/lib/../lib64/crti.o] ==> ignore
+    arg [/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/crtbegin.o] ==> ignore
+    arg [-L/apps/2021/cuda/10.1/targets/x86_64-linux/lib/stubs] ==> dir [/apps/2021/cuda/10.1/targets/x86_64-linux/lib/stubs]
+    arg [-L/apps/2021/cuda/10.1/targets/x86_64-linux/lib] ==> dir [/apps/2021/cuda/10.1/targets/x86_64-linux/lib]
+    arg [-L/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib64/../lib64] ==> dir [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib64/../lib64]
+    arg [-L/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib/../lib64] ==> dir [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib/../lib64]
+    arg [-L/apps/2021/opencv/4.5.2-contrib/lib64/../lib64] ==> dir [/apps/2021/opencv/4.5.2-contrib/lib64/../lib64]
+    arg [-L/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0] ==> dir [/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0]
+    arg [-L/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../lib64] ==> dir [/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../lib64]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/apps/2021/llvm/11.0.0/lib] ==> dir [/apps/2021/llvm/11.0.0/lib]
+    arg [-L/apps/2021/llvm/11.0.0/libexec] ==> dir [/apps/2021/llvm/11.0.0/libexec]
+    arg [-L/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib64] ==> dir [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib64]
+    arg [-L/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib] ==> dir [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib]
+    arg [-L/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libelf-0.8.13-m5ndvdx7mc7al3xfq2venrdfo2laoy3g/lib] ==> dir [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libelf-0.8.13-m5ndvdx7mc7al3xfq2venrdfo2laoy3g/lib]
+    arg [-L/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/isl-0.18-zwfd4x6n3v3vads3ncukk5mtgt6xv2qj/lib] ==> dir [/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/isl-0.18-zwfd4x6n3v3vads3ncukk5mtgt6xv2qj/lib]
+    arg [-L/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpc-1.1.0-ijex5qs7pt44n7whqlgwqj4jwc3czkac/lib] ==> dir [/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpc-1.1.0-ijex5qs7pt44n7whqlgwqj4jwc3czkac/lib]
+    arg [-L/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpfr-4.0.2-yfoprebczoqpokivqgmnjn5os4r7mxw6/lib] ==> dir [/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpfr-4.0.2-yfoprebczoqpokivqgmnjn5os4r7mxw6/lib]
+    arg [-L/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gmp-6.1.2-raqmdaosldybjrn6y2xnnnyy2f63hg6b/lib] ==> dir [/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gmp-6.1.2-raqmdaosldybjrn6y2xnnnyy2f63hg6b/lib]
+    arg [-L/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/openssl-1.1.1h-iwybd6raqg2jisesulhn4eq4u6pua4r5/lib] ==> dir [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/openssl-1.1.1h-iwybd6raqg2jisesulhn4eq4u6pua4r5/lib]
+    arg [-L/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/zlib-1.2.11-cd5sn7qr4dpsl52yco7o4un6svatshid/lib] ==> dir [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/zlib-1.2.11-cd5sn7qr4dpsl52yco7o4un6svatshid/lib]
+    arg [-L/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/ncurses-6.2-hjedt2uy7o2piyycr3ttni2puoezbfu6/lib] ==> dir [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/ncurses-6.2-hjedt2uy7o2piyycr3ttni2puoezbfu6/lib]
+    arg [-L/apps/2021/opencv/4.5.2-contrib/lib64] ==> dir [/apps/2021/opencv/4.5.2-contrib/lib64]
+    arg [-L/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../..] ==> dir [/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../..]
+    arg [CMakeFiles/cmTC_39c5c.dir/CMakeCUDACompilerABI.cu.o] ==> ignore
+    arg [-lcudadevrt] ==> lib [cudadevrt]
+    arg [-lcudart_static] ==> lib [cudart_static]
+    arg [-lrt] ==> lib [rt]
+    arg [-lpthread] ==> lib [pthread]
+    arg [-ldl] ==> lib [dl]
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/crtend.o] ==> ignore
+    arg [/lib/../lib64/crtn.o] ==> ignore
+  collapse library dir [/apps/2021/cuda/10.1/targets/x86_64-linux/lib/stubs] ==> [/apps/2021/cuda/10.1/targets/x86_64-linux/lib/stubs]
+  collapse library dir [/apps/2021/cuda/10.1/targets/x86_64-linux/lib] ==> [/apps/2021/cuda/10.1/targets/x86_64-linux/lib]
+  collapse library dir [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib64/../lib64] ==> [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib64]
+  collapse library dir [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib/../lib64] ==> [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib64]
+  collapse library dir [/apps/2021/opencv/4.5.2-contrib/lib64/../lib64] ==> [/apps/2021/opencv/4.5.2-contrib/lib64]
+  collapse library dir [/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0] ==> [/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0]
+  collapse library dir [/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../lib64] ==> [/apps/2021/gcc/8.1.0/lib64]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/apps/2021/llvm/11.0.0/lib] ==> [/apps/2021/llvm/11.0.0/lib]
+  collapse library dir [/apps/2021/llvm/11.0.0/libexec] ==> [/apps/2021/llvm/11.0.0/libexec]
+  collapse library dir [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib64] ==> [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib64]
+  collapse library dir [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib] ==> [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib]
+  collapse library dir [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libelf-0.8.13-m5ndvdx7mc7al3xfq2venrdfo2laoy3g/lib] ==> [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libelf-0.8.13-m5ndvdx7mc7al3xfq2venrdfo2laoy3g/lib]
+  collapse library dir [/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/isl-0.18-zwfd4x6n3v3vads3ncukk5mtgt6xv2qj/lib] ==> [/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/isl-0.18-zwfd4x6n3v3vads3ncukk5mtgt6xv2qj/lib]
+  collapse library dir [/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpc-1.1.0-ijex5qs7pt44n7whqlgwqj4jwc3czkac/lib] ==> [/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpc-1.1.0-ijex5qs7pt44n7whqlgwqj4jwc3czkac/lib]
+  collapse library dir [/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpfr-4.0.2-yfoprebczoqpokivqgmnjn5os4r7mxw6/lib] ==> [/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpfr-4.0.2-yfoprebczoqpokivqgmnjn5os4r7mxw6/lib]
+  collapse library dir [/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gmp-6.1.2-raqmdaosldybjrn6y2xnnnyy2f63hg6b/lib] ==> [/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gmp-6.1.2-raqmdaosldybjrn6y2xnnnyy2f63hg6b/lib]
+  collapse library dir [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/openssl-1.1.1h-iwybd6raqg2jisesulhn4eq4u6pua4r5/lib] ==> [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/openssl-1.1.1h-iwybd6raqg2jisesulhn4eq4u6pua4r5/lib]
+  collapse library dir [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/zlib-1.2.11-cd5sn7qr4dpsl52yco7o4un6svatshid/lib] ==> [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/zlib-1.2.11-cd5sn7qr4dpsl52yco7o4un6svatshid/lib]
+  collapse library dir [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/ncurses-6.2-hjedt2uy7o2piyycr3ttni2puoezbfu6/lib] ==> [/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/ncurses-6.2-hjedt2uy7o2piyycr3ttni2puoezbfu6/lib]
+  collapse library dir [/apps/2021/opencv/4.5.2-contrib/lib64] ==> [/apps/2021/opencv/4.5.2-contrib/lib64]
+  collapse library dir [/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../..] ==> [/apps/2021/gcc/8.1.0/lib]
+  implicit libs: [cudadevrt;cudart_static;rt;pthread;dl;stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+  implicit dirs: [/apps/2021/cuda/10.1/targets/x86_64-linux/lib/stubs;/apps/2021/cuda/10.1/targets/x86_64-linux/lib;/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib64;/apps/2021/opencv/4.5.2-contrib/lib64;/apps/2021/gcc/8.1.0/lib/gcc/x86_64-pc-linux-gnu/8.1.0;/apps/2021/gcc/8.1.0/lib64;/lib64;/usr/lib64;/apps/2021/llvm/11.0.0/lib;/apps/2021/llvm/11.0.0/libexec;/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libffi-3.3-cekv3mhygvn5fq2gr22ljv662iunrcsh/lib;/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/libelf-0.8.13-m5ndvdx7mc7al3xfq2venrdfo2laoy3g/lib;/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/isl-0.18-zwfd4x6n3v3vads3ncukk5mtgt6xv2qj/lib;/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpc-1.1.0-ijex5qs7pt44n7whqlgwqj4jwc3czkac/lib;/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/mpfr-4.0.2-yfoprebczoqpokivqgmnjn5os4r7mxw6/lib;/apps/spack/0.16.0/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gmp-6.1.2-raqmdaosldybjrn6y2xnnnyy2f63hg6b/lib;/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/openssl-1.1.1h-iwybd6raqg2jisesulhn4eq4u6pua4r5/lib;/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/zlib-1.2.11-cd5sn7qr4dpsl52yco7o4un6svatshid/lib;/apps/spack/0.16.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/ncurses-6.2-hjedt2uy7o2piyycr3ttni2puoezbfu6/lib;/apps/2021/gcc/8.1.0/lib]
+  implicit fwks: []
+
+

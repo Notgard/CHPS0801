@@ -2,5 +2,6 @@
 module load opencv
 module load cmake
 module load cuda/10.1
+module load llvm/11.0.0
 #dont use doesnt have openmp or cuda or anything useful 
 #module load kokkos

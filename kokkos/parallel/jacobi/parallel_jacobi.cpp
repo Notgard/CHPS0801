@@ -7,6 +7,7 @@ using namespace cv;
 using namespace std;
 
 #define NOISE_ITER 15
+#define ITERATIONS 15
 #define PADDING 1
 
 #include <Kokkos_Core.hpp>
@@ -25,7 +26,7 @@ int main(int argc, char **argv)
     }
 
     CommandLineParser parser(argc, argv,
-                             "{@input   |../../img/lena.jpg|input image}");
+                             "{@input   |../../img/img.jpg|input image}");
     parser.printMessage();
 
     String imageName = parser.get<String>("@input");
@@ -135,8 +136,8 @@ int main(int argc, char **argv)
         ViewImageType img_out("image_out", image_pad.rows, image_pad.cols, cn);
 
         // create host mirrors of device views to write the image back from the host using opencv
-        // ViewImageType::HostMirror img_in_host = Kokkos::create_mirror_view(img_in);
-        // ViewImageType::HostMirror img_out_host = Kokkos::create_mirror_view(img_out);
+        ViewImageType::HostMirror host_img_in = Kokkos::create_mirror_view(img_in);
+        ViewImageType::HostMirror host_img_out = Kokkos::create_mirror_view(img_out);
 
         // initialize both views with data
         int stride = 1;
@@ -145,7 +146,25 @@ int main(int argc, char **argv)
 
         cout << "Initializing kokkos in and out views" << endl;
 
-        Kokkos::parallel_for("init_image", full_image, KOKKOS_LAMBDA(int i, int j) {
+        //CUDA VERSION INITIALIZATION
+        for (int i = 0; i < image_pad.rows; i++)
+        {
+            for (int j = 0; j < image_pad.cols; j++)
+            {
+                int index = i * image_pad.cols * cn + j * cn;
+                host_img_in(i, j, 0) = pixelPtr[index + 0]; // B
+                host_img_in(i, j, 1) = pixelPtr[index + 1]; // G
+                host_img_in(i, j, 2) = pixelPtr[index + 2]; // R
+                host_img_out(i, j, 0) = 0;                  // initialize output image as black
+                host_img_out(i, j, 1) = 0;                  // initialize output image as black
+                host_img_out(i, j, 2) = 0;                  // initialize output image as black
+            }
+        }
+
+        Kokkos::deep_copy(img_in, host_img_in);
+        Kokkos::deep_copy(img_out, host_img_out);
+
+/*         Kokkos::parallel_for("init_image", full_image, KOKKOS_LAMBDA(int i, int j) {
             int index = i * img.cols * cn + j * cn;
             //img_in(i, j, k) = pixelPtr[index + k];
             img_in(i, j,  0) = pixelPtr[index + 0]; // B
@@ -154,14 +173,8 @@ int main(int argc, char **argv)
             img_out(i, j, 0) = 0;                  // initialize output image as black
             img_out(i, j, 1) = 0;                  // initialize output image as black
             img_out(i, j, 2) = 0;                  // initialize output image as black
-            // img_in(index + 0) = pixelPtr[index + 0]; // B
-            // img_in(index + 1) = pixelPtr[index + 1]; // G
-            // img_in(index + 2) = pixelPtr[index + 2]; // R
-            // img_out(index + 0) = 0;                  // initialize output image as black
-            // img_out(index + 1) = 0;                  // initialize output image as black
-            // img_out(index + 2) = 0;                  // initialize output image as black
         });
-        Kokkos::fence();
+        Kokkos::fence(); */
 
         cout << "finished init, starting jacobi filter" << endl;
 
@@ -170,56 +183,72 @@ int main(int argc, char **argv)
         ///////////////////////////////////////////////////////
 
         //auto original_image = Kokkos::MDRangePolicy<Kokkos::Rank<3>>({0, 0, 0}, {img.rows, img.cols, cn}, {stride, stride, stride});
-        auto original_image = Kokkos::MDRangePolicy<Kokkos::Rank<2>>({0, 0}, {img.rows, img.cols}, {stride, stride});
+        auto stencil_image = Kokkos::MDRangePolicy<Kokkos::Rank<2>>({0, 0}, {image_pad.rows, image_pad.cols}, {stride, stride});
 
         // Timer products.
         Kokkos::Timer timer;
 
-        Kokkos::parallel_for("apply_jacobi", original_image, KOKKOS_LAMBDA(int i, int j) {
-            // current pixel
-            auto pixel = Kokkos::subview(img_in, i, j, Kokkos::ALL); //grabs all color channels
+        for (int iter = 0; iter < ITERATIONS; ++iter)
+        {
+            Kokkos::parallel_for("apply_jacobi", stencil_image, KOKKOS_LAMBDA(int i, int j) {
+                // current pixel
+                auto pixel = Kokkos::subview(img_in, i, j, Kokkos::ALL); //grabs all color channels
 
-            //left pixel
-            auto left = Kokkos::subview(img_in, i, j - 1, Kokkos::ALL);
+                //left pixel
+                auto left = Kokkos::subview(img_in, i, j - 1, Kokkos::ALL);
 
-            // right pixel
-            auto right = Kokkos::subview(img_in, i, j + 1, Kokkos::ALL);
+                // right pixel
+                auto right = Kokkos::subview(img_in, i, j + 1, Kokkos::ALL);
 
-            // up pixel
-            auto up = Kokkos::subview(img_in, i - 1, j, Kokkos::ALL);
+                // up pixel
+                auto up = Kokkos::subview(img_in, i - 1, j, Kokkos::ALL);
 
-            // down pixel
-            auto down = Kokkos::subview(img_in, i + 1, j, Kokkos::ALL); 
-            
-            //uint8_t val = (pixel(0) + left(0) + right(0) + up(0) + down(0)) / 5;
-            //img_out(i, j, 0) = (pixel(0) + left(0) + right(0) + up(0) + down(0)) * 0.2;
-            //img_out(i, j, 1) = (pixel(1) + left(1) + right(1) + up(1) + down(1)) * 0.2;
-            //img_out(i, j, 2) = (pixel(2) + left(2) + right(2) + up(2) + down(2)) * 0.2;
-            for(int k = 0; k < cn; k++) {
-                img_out(i, j, k) = (pixel(k) + left(k) + right(k) + up(k) + down(k)) * 0.2;
-            }
-        });
-        Kokkos::fence();
+                // down pixel
+                auto down = Kokkos::subview(img_in, i + 1, j, Kokkos::ALL); 
+                
+                for(int k = 0; k < cn; k++) {
+                    img_out(i, j, k) = (pixel(k) + left(k) + right(k) + up(k) + down(k)) * 0.2;
+                }
+            });
+            Kokkos::fence();
+            Kokkos::deep_copy(img_in, img_out);
+        }
         cout << "finished jacobi filter, writing back to host..." << endl;
 
         // Calculate time.
         double time = timer.seconds();
 
+        Kokkos::deep_copy(host_img_out, img_out);
+
         ///////////////////////////////////////////////
         // Copy back view memory from device to host to write the image back using opencv
         ///////////////////////////////////////////////
 
-        Kokkos::parallel_for("output_image", original_image, KOKKOS_LAMBDA(int i, int j) {
+        auto original_image = Kokkos::MDRangePolicy<Kokkos::Rank<2>>({0, 0}, {img.rows, img.cols}, {stride, stride});
+
+/*         Kokkos::parallel_for("output_image", original_image, KOKKOS_LAMBDA(int i, int j) {
             int index = i * img.cols * cn + j * cn;
             //pixelPtr[index + k] = img_out(i, j, k); 
             pixelPtr[index + 0] = img_out(i, j, 0); // B
             pixelPtr[index + 1] = img_out(i, j, 1); // G
             pixelPtr[index + 2] = img_out(i, j, 2); // R
         });
-        Kokkos::fence();
+        Kokkos::fence(); */
+
+        //CUDA COPY BACK DATA
+        for (int i = 0; i < image_pad.rows; i++)
+        {
+            for (int j = 0; j < image_pad.cols; j++)
+            {
+                int index = i * image_pad.cols * cn + j * cn;
+                pixelPtr[index + 0] = host_img_out(i, j, 0); // B
+                pixelPtr[index + 1] = host_img_out(i, j, 1); // G
+                pixelPtr[index + 2] = host_img_out(i, j, 2); // R
+            }
+        }
 
         // Calculate bandwidth.
-        double Gbytes = 1.0e-9 * double(sizeof(uint8_t) * (img.rows * img.cols * cn * 4));
+        double Gbytes = 1.0e-9 * double(sizeof(uint8_t) * ((img.rows * img.cols * cn * 4) * ITERATIONS));
 
         // Print results (problem size, time and bandwidth in GB/s).
         printf("time( %g s ) bandwidth( %g GB/s )\n",
@@ -233,7 +262,7 @@ int main(int argc, char **argv)
     cv::Mat image_no_pad = image_pad(roi).clone();
     fprintf(stdout, "Removed padding from %dx%d to %dx%d...\n", image_pad.rows, image_pad.cols, image_no_pad.rows, image_no_pad.cols);
 
-    imwrite("../../res/new_jacobi.jpg", image_no_pad);
-    imwrite("../../res/new_jacobi_noise.jpg", mColorNoise);
+    imwrite("../../res/kparallel_jacobi.jpg", image_no_pad);
+    imwrite("../../res/kparallel_jacobi_noise.jpg", mColorNoise);
     return 0;
 }
