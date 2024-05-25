@@ -1,5 +1,6 @@
 #!/bin/bash
-module load opencv/4.5.1
+module load opencv
 module load cmake
 module load cuda/10.1
-module load kokkos
+#dont use doesnt have openmp or cuda or anything useful 
+#module load kokkos

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#SBATCH --nodes 1
+#SBATCH --ntasks-per-node 1
+#SBATCH --job-name JACOBI
+#SBATCH --cpus-per-task=16 ### Number of threads per task (OMP threads)
+#SBATCH --output jacobi.out
+#SBATCH --partition=short
+#SBATCH --reservation=CHPS
+#SBATCH --mem=10G           # total memory per node
+#SBATCH --gres=gpu:1 ##Number of GPUs
+
+export CUDA_VISIBLE_DEVICES=0
+
+cmake -B jacobi/build-gpu -DKokkos_ENABLE_CUDA=ON -DKokkos_ARCH_PASCAL60=ON jacobi/
+cmake --build jacobi/build-gpu --parallel
+./jacobi/build-gpu/kokkos_jacobi

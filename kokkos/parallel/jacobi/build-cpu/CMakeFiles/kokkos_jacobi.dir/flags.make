@@ -4,7 +4,7 @@
 # compile CXX with /apps/2021/gcc/10.2/bin/c++
 CXX_DEFINES = -DKOKKOS_DEPENDENCE
 
-CXX_INCLUDES = -isystem /apps/2021/opencv/4.5.1/include/opencv4 -isystem /apps/2021/spack/0.17.0/opt/spack/linux-rhel7-skylake_avx512/gcc-10.2.0/kokkos-3.4.01-bngy6344ddjox34ktqilmykznuufydug/include
+CXX_INCLUDES = -I/home/groubahiefissa/chps/chps0801_projet/kokkos/parallel/jacobi/build-cpu/Kokkos -I/home/groubahiefissa/chps/chps0801_projet/kokkos/parallel/jacobi/build-cpu/Kokkos/core/src -I/home/groubahiefissa/chps/chps0801_projet/kokkos/dep/Kokkos/core/src -I/home/groubahiefissa/chps/chps0801_projet/kokkos/parallel/jacobi/build-cpu/Kokkos/containers/src -I/home/groubahiefissa/chps/chps0801_projet/kokkos/dep/Kokkos/containers/src -I/home/groubahiefissa/chps/chps0801_projet/kokkos/parallel/jacobi/build-cpu/Kokkos/algorithms/src -I/home/groubahiefissa/chps/chps0801_projet/kokkos/dep/Kokkos/algorithms/src -isystem /apps/2021/opencv/4.5.2-contrib-gcc8/include/opencv4
 
-CXX_FLAGS = -O2 -g -DNDEBUG -g -march=skylake-avx512 -mtune=skylake-avx512 -mrtm
+CXX_FLAGS = -O2 -g -DNDEBUG -g -std=c++11 -fopenmp -std=gnu++14
 

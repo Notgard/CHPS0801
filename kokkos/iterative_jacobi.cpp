@@ -1,19 +1,22 @@
 #include <iostream>
-//#include <vector>
-//#include <algorithm>
+#include <chrono>
+#include <ctime>
+#include <iomanip>
 
 #include "gaussianNoise.h"
+
+using namespace std::chrono;
 
 using namespace cv;
 using namespace std;
 
-#define NOISE_ITER 15
+#define NOISE_ITER 15   
 #define PADDING 1
 
 int main(int argc, char **argv)
 {
     CommandLineParser parser(argc, argv,
-                             "{@input   |../img/lena.jpg|input image}");
+                             "{@input   |../img/img.jpg|input image}");
     parser.printMessage();
 
     String imageName = parser.get<String>("@input");
@@ -53,10 +56,10 @@ int main(int argc, char **argv)
     uint8_t *pixelPtr = (uint8_t *)image_pad.data;
     int cn = image_pad.channels();
 
-    //+4 to include the padding of 1 on each border of the image
-    for (int i = 0; i < img.rows+4; i++)
+    auto start = high_resolution_clock::now();
+    for (int i = 0; i < img.rows; i++)
     {
-        for (int j = 0; j < img.cols+4; j++)
+        for (int j = 0; j < img.cols; j++)
         {
             uint8_t b = pixelPtr[i * img.cols * cn + j * cn + 0]; // B
             uint8_t g = pixelPtr[i * img.cols * cn + j * cn + 1]; // G
@@ -104,10 +107,20 @@ int main(int argc, char **argv)
             pixelPtr[i * img.cols * cn + j * cn + 2] = avg_r; //R
         }
     }
+    auto stop = high_resolution_clock::now();
+
+    std::chrono::duration<double> diff = stop - start;
+    //output measured time in seconds
+    cout << setprecision (20)
+         << diff.count() << " seconds" << endl;
 
     fprintf(stdout, "Writting the output image of size %dx%d...\n", img.rows, img.cols);
 
-    imwrite("../res/jacobi_res.jpg", image_pad);
+    cv::Rect roi(PADDING, PADDING, image_pad.cols - PADDING - PADDING, image_pad.rows - PADDING - PADDING);
+    cv::Mat image_no_pad = image_pad(roi).clone();
+    fprintf(stdout, "Removed padding from %dx%d to %dx%d...\n", image_pad.rows, image_pad.cols, image_no_pad.rows, image_no_pad.cols);
+
+    imwrite("../res/jacobi_res.jpg", image_no_pad);
     imwrite("../res/noised_res.jpg", mColorNoise);
     return 0;
 }

@@ -79,6 +79,42 @@ int main(int argc, char **argv)
     {
 
 #ifdef KOKKOS_ENABLE_CUDA
+        if (Kokkos::DefaultExecutionSpace::execution_space::name() == std::string("Cuda")) {
+            int device_id = Kokkos::DefaultExecutionSpace().cuda_device();
+            cudaDeviceProp prop;
+            cudaGetDeviceProperties(&prop, device_id);
+            std::cout << "Using CUDA Device: " << device_id << " (" << prop.name << ")" << std::endl;
+        }
+#endif
+
+#ifdef KOKKOS_ENABLE_HIP
+        if (Kokkos::DefaultExecutionSpace::execution_space::name() == std::string("HIP")) {
+            int device_id = Kokkos::DefaultExecutionSpace().hip_device();
+            hipDeviceProp_t prop;
+            hipGetDeviceProperties(&prop, device_id);
+            std::cout << "Using HIP Device: " << device_id << " (" << prop.name << ")" << std::endl;
+        }
+#endif
+
+#ifdef KOKKOS_ENABLE_OPENMPTARGET
+        if (Kokkos::DefaultExecutionSpace::execution_space::name() == std::string("OpenMPTarget")) {
+            std::cout << "Using OpenMPTarget Execution Space" << std::endl;
+        }
+#endif
+
+#ifdef KOKKOS_ENABLE_OPENMP
+        if (Kokkos::DefaultExecutionSpace::execution_space::name() == std::string("OpenMP")) {
+            std::cout << "Using OpenMP Execution Space" << std::endl;
+        }
+#endif
+
+#ifdef KOKKOS_ENABLE_SERIAL
+        if (Kokkos::DefaultExecutionSpace::execution_space::name() == std::string("Serial")) {
+            std::cout << "Using Serial Execution Space" << std::endl;
+        }
+#endif
+
+#ifdef KOKKOS_ENABLE_CUDA
 #define MemSpace Kokkos::CudaSpace
 #endif
 #ifdef KOKKOS_ENABLE_OPENMPTARGET
@@ -197,7 +233,7 @@ int main(int argc, char **argv)
     cv::Mat image_no_pad = image_pad(roi).clone();
     fprintf(stdout, "Removed padding from %dx%d to %dx%d...\n", image_pad.rows, image_pad.cols, image_no_pad.rows, image_no_pad.cols);
 
-    imwrite("../../res/kokkos_parallel1_jacobi_res.jpg", image_no_pad);
-    imwrite("../../res/kokkos_parallel1_jacobi_noised_res.jpg", mColorNoise);
+    imwrite("../../res/new_jacobi.jpg", image_no_pad);
+    imwrite("../../res/new_jacobi_noise.jpg", mColorNoise);
     return 0;
 }
